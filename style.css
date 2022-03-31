@@ -73,7 +73,8 @@ nav.solid .button-styled:hover a
   color: #ffffff;
 }
 
-.button-styled {
+.button-styled
+{
   font-size: 1.2rem;
   color: #ff3f81;
   transition: .5s;
@@ -82,11 +83,13 @@ nav.solid .button-styled:hover a
   height: 40px;
   background: -webkit-linear-gradient(0deg, transparent 50%, #ff3f81 50%);
   background-size: 400px;
-  border: 1px solid #ff3f81;
+  border: 2px solid #ff3f81;
+  border-radius: 10px;
   text-transform: uppercase;
 }
 
-.button-styled:hover{
+.button-styled:hover
+{
   background-position: 200px 0;
   cursor: pointer;
   border-radius: 25px;
@@ -174,7 +177,7 @@ nav ul li a:hover
 
 .section-about .aligner
 {
-  padding: 50px;
+  padding: 25px;
   background-color: #2a2a30;
   width: 100%;
   margin: 0 auto;
@@ -182,16 +185,31 @@ nav ul li a:hover
 
 .section-about .aligner .left
 {
-  text-align: right;
-  padding-right: 50px;
-  width: 50%;
+  padding-right: 25px;
+  width: 70%;
   float: left;
 }
 
 .section-about .aligner .right
 {
-  width: 50%;
-  margin-left: 50%;
+  width: 30%;
+  margin-left: 70%;
+}
+
+.section-about .aligner .right img
+{
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate3d(0, 0, 0, 0deg);
+  box-shadow: 0px 0px 0px transparent;
+  transition: all 1s ease;
+}
+
+.section-about .aligner .right img:hover
+{
+  transform: rotate3d(1, -1, 1, 45deg);
+  box-shadow: 20px 20px 20px #000000;
 }
 
 .section-parallax
@@ -207,28 +225,42 @@ nav ul li a:hover
 .section-skills
 {
   width: 100%;
-  height: 150vh;
-  padding: 5% 25%;
+  height: 100%;
   position: relative;
   background-color: #1a1a20;
 }
 
 .section-skills .aligner { 
   background-color: #2a2a30;
+  padding: 25px;
+  display: inline-block;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
 .section-skills .aligner .left {
-  width: 50%;
+  width: 30%;
   float: left;
 }
 
-.section-skills .aligner .right  {
-  padding: 50px;
-  width: 50%;
+.section-skills .aligner .left img {
+  width: 100%;
   height: 100%;
-  margin-left: 50%;
+  display: block;
+  box-shadow: 0px 0px 0px transparent;
+  transition: all 1s ease;
+}
+
+.section-skills .aligner .left img:hover
+{
+  box-shadow: 20px 20px 20px #000000;
+}
+
+.section-skills .aligner .right  {
+  width: 70%;
+  height: 100%;
+  margin-left: 32%;
 }
 
 .section-portfolio
@@ -244,10 +276,9 @@ nav ul li a:hover
   width: 100%;
   height: 100%;
   margin: auto;
-  text-align: center;
 }
 
-.section-portfolio h2
+.section-portfolio h3
 {
   color: #1a1a20;
 }
@@ -283,17 +314,24 @@ h2
 
 h3
 {
-  font-size: 1.5rem;
-  color: #ff3f81;
+  font-size: 3rem;
   font-weight: 800;
+  color: #ffffff;
 }
 
 h4
 {
-  margin-top: 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #6a6a70;
+  color: #ff3f81;
+}
+
+.heading
+{
+  font-size: 3rem;
+  margin-bottom: 25px;
+  border-bottom: 5px solid #ff3f81;
+  display: inline-flex;
 }
 
 .button-styled a
@@ -343,7 +381,7 @@ body .back-image img {
   opacity: 0.3;
   border-radius: 30px;
   margin-bottom: 8vh;
-  box-shadow: 10px 10px 10px #000;
+  box-shadow: 10px 10px 10px #000000;
 }
 
 .page-portfolio
@@ -441,11 +479,11 @@ body .back-image img {
 {
   background-color: #2a2a30;
   padding: 30px 0;
-  height: 480px;
+  height: 430px;
 }
 
 .container {
-  max-width: 60%;
+  max-width: 70%;
   margin: auto;
   position: relative;
 }
@@ -459,18 +497,18 @@ body .back-image img {
 .footer-col
 {
   margin-bottom: 30px;
-  width: 25%;
+  width: 20%;
   padding: 0 15px;
 }
 
-.footer-col h3
+.footer-col h4
 {
   text-transform: capitalize;
   margin-bottom: 30px;
   position: relative;
 }
 
-.footer-col h3::before
+.footer-col h4::before
 {
   content: "";
   position: absolute;
@@ -642,128 +680,21 @@ input:valid ~ .details, textarea:valid ~ .details {
   animation: float 10s ease-in-out infinite;
 }
 
-.img-example-2
-{
-  width: 100%;
-  border: 3px solid #1a1a20;
-  transform: rotate3d(1, -1, 1, 45deg);
-  box-shadow: 20px 20px 20px #000000;
-  transition: all 1000ms ease;
-}
-
-.img-example-2:hover
-{
-  transform: rotate3d(0, 0, 0, 0deg);
-  box-shadow: 0px 0px 0px transparent;
-}
-
-.img-example-3
-{
-  width: 100%;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    top: 0;
-    animation-timing-function: ease-out;
-  }
-  17% {
-    top: 15px;
-    animation-timing-function: ease-in;
-  }
-  34% {
-    top: 0;
-    animation-timing-function: ease-out;
-  }
-  51% {
-    top: 8px;
-    animation-timing-function: ease-in;
-  }
-  68% {
-    top: 0px;
-    animation-timing-function: ease-out;
-  }
-  85% {
-    top: 3px;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    top: 0;
-  }
-}
-@-moz-keyframes bounce {
-  0% {
-    top: 0;
-    animation-timing-function: ease-out;
-  }
-  17% {
-    top: 15px;
-    animation-timing-function: ease-in;
-  }
-  34% {
-    top: 0;
-    animation-timing-function: ease-out;
-  }
-  51% {
-    top: 8px;
-    animation-timing-function: ease-in;
-  }
-  68% {
-    top: 0px;
-    animation-timing-function: ease-out;
-  }
-  85% {
-    top: 3px;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    top: 0;
-  }
-}
-@keyframes bounce {
-  0% {
-    top: 0;
-    animation-timing-function: ease-out;
-  }
-  17% {
-    top: 15px;
-    animation-timing-function: ease-in;
-  }
-  34% {
-    top: 0;
-    animation-timing-function: ease-out;
-  }
-  51% {
-    top: 8px;
-    animation-timing-function: ease-in;
-  }
-  68% {
-    top: 0px;
-     }
-  85% {
-    top: 3px;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    top: 0;
-  }
-}
 .hover { 
   position: relative;
-  transition: all 500ms ease;
+  transition: all 1s ease;
   border-bottom: 0px solid transparent;
+  left: 0;
+  top: 0;
 }
 
 .hover:hover
 {
+  left: -10px;
+  top: 10px;
+  text-shadow: 20px -20px #bbbbbb;
   border-bottom: 10px solid #ff3f81;
   color: #ff3f81;
-}
-
-.hover.animated { 
-  -moz-animation: bounce 1s;
-  -webkit-animation: bounce 1s;
-  animation: bounce 1s;
 }
 
 .parallax
