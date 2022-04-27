@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
 *
 {
   margin: 0;
@@ -187,7 +187,7 @@ nav ul li a:hover
 
 .section-landing .aligner
 {
-  height: 40%;
+  height: 35%;
   position: relative;
   overflow: hidden;
   width: 50%;
@@ -356,7 +356,7 @@ nav ul li a:hover
 
 .highlight
 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 800;
   color: #2196f3;
 }
@@ -365,11 +365,23 @@ h1
 {
   opacity: 0;
   transform: translateY(400px);
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 800;
   text-transform: capitalize;
   font-size: 8rem;
   color: #1a1a20;
+}
+
+.wrapper-rolling-text {
+  background-color: #2a2a30;
+  white-space: nowrap;
+}
+
+.rolling-text {
+  color: #bbbbbb;
+  font-family: "Quicksand", sans-serif;
+  font-size: 6vw;
+  display: inline-block;
 }
 
 h2
@@ -382,8 +394,6 @@ h2
 
 h3
 {
-  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-  opacity: 0;
   transform: translateX(300px);
   font-size: 3rem;
   font-weight: 800;
