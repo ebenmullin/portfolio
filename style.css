@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 *
 {
   margin: 0;
@@ -19,21 +20,25 @@ body
 
 nav
 {
+  transform: translateY(-120px);
+  opacity: 0;
   display: flex;
   justify-content: stretch;
   position: fixed;
-  background-color: #eeeeee;
-  box-shadow: 0 2px 10px #000000;
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 1vh;
-  padding-right: 1vw;
-  padding-bottom: 1vh;
-  padding-left: 1vw;
+  padding: 5vh 10vw;
   box-sizing: border-box;
   transition: all 0.5s;
   z-index: 1;
+}
+
+.expanded
+{
+  padding: 1vh 1vw;
+  box-shadow: 0 2px 10px #000000;
+  backdrop-filter: blur(5px);
 }
 
 nav .align.left
@@ -41,9 +46,22 @@ nav .align.left
   flex-grow: 1;  
 }
 
-nav .align.left .logo
+#logo
 {
   height: 60px;
+  transform: scale(2);
+  transition: 300ms;
+}
+
+.expanded #logo
+{
+  transform: scale(1);
+  height: 60px;
+}
+
+#logo:hover
+{
+  transform: scale(1.2);
 }
 
 nav .align.right {
@@ -53,33 +71,14 @@ nav .align.right {
   justify-content: center;
 }
 
-nav.solid
-{
-  background: #3a3a40;
-}
-
-nav.solid a
-{
-  color: #ffffff
-}
-
-nav.solid .button-styled a
-{
-  color: #ff3f81;
-}
-
-nav.solid .button-styled:hover a
-{
-  color: #ffffff;
-}
-
 .button-styled
 {
-  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem;
   color: #ff3f81;
   transition: .5s;
   outline: none;
-  width: 160px;
+  width: 200px;
   height: 40px;
   background: -webkit-linear-gradient(0deg, transparent 50%, #ff3f81 50%);
   background-size: 400px;
@@ -117,14 +116,15 @@ a.active
 
 nav ul li a
 {
+  -webkit-font-smoothing: antialiased;
   position: relative;
   display: inline-block;
   margin: 5px 30px 5px 0;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  color: #1a1a20;
+  color: #ffffff;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 2px;
   overflow: hidden;
   transition: 300ms;
@@ -140,15 +140,40 @@ nav ul li a:hover
   opacity: 1;
 }
 
-.content
-{
-  padding: 5% 10%;
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 .section-landing
 {
-  width: 100%;
-  height: 100vh;
+  background: linear-gradient(240deg,#323949, #3d3e51, #40445a, #212129, #eee3e7, #ead5dc, #eec9d2, #f4b6c2, #f6abb6, #323949, #3d3e51, #40445a, #212129);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  margin: 10vh auto;
+  border-radius: 2vw;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,6 +187,9 @@ nav ul li a:hover
 
 .section-landing .aligner
 {
+  height: 40%;
+  position: relative;
+  overflow: hidden;
   width: 50%;
   margin: 0 0 0 5%;
   text-align: center;
@@ -169,16 +197,18 @@ nav ul li a:hover
 
 .section-about
 {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin: 10vh auto;
+  border-radius: 2vw;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  background-color: #1a1a20;
+  background-color: #2a2a30;
 }
 
 .section-about .aligner
 {
   padding: 25px;
-  background-color: #2a2a30;
   width: 100%;
   margin: 0 auto;
 }
@@ -224,19 +254,51 @@ nav ul li a:hover
 
 .section-skills
 {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin: 10vh auto;
+  border-radius: 2vw;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  background-color: #1a1a20;
+  background-color: #101010;
 }
 
-.section-skills .aligner { 
-  background-color: #2a2a30;
+.section-skills .aligner {
   padding: 25px;
   display: inline-block;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+
+.img-container
+{
+  margin: 20% 0;
+  width: 70%;
+  position: relative;
+}
+
+.img-container:nth-child(even)
+{
+  margin-right: 0;
+  float: right;
+}
+
+.gsap-img
+{
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  object-fit: cover;
+}
+
+.mask
+{
+  visibility: hidden;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
 }
 
 .section-skills .aligner .left {
@@ -265,8 +327,11 @@ nav ul li a:hover
 
 .section-portfolio
 {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin: 10vh auto;
+  border-radius: 2vw;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   background-color: #cccccc;
 }
@@ -275,6 +340,7 @@ nav ul li a:hover
 {
   width: 100%;
   height: 100%;
+  padding: 25px;
   margin: auto;
 }
 
@@ -290,14 +356,16 @@ nav ul li a:hover
 
 .highlight
 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 800;
   color: #2196f3;
 }
 
 h1
 {
-  font-family: "Ubuntu", sans-serif;
+  opacity: 0;
+  transform: translateY(400px);
+  font-family: 'Quicksand', sans-serif;
   font-weight: 800;
   text-transform: capitalize;
   font-size: 8rem;
@@ -314,6 +382,9 @@ h2
 
 h3
 {
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateX(300px);
   font-size: 3rem;
   font-weight: 800;
   color: #ffffff;
@@ -351,11 +422,6 @@ p
   font-size: 1.2rem;
   line-height: 150%;
   color: #bbbbbb;
-}
-
-.paragraph
-{
-  font-size: 1.5rem;
 }
 
 body .back-image {
@@ -454,7 +520,7 @@ body .back-image img {
     z-index: 1;
     padding: 15px;
     color: #444;
-    background: #fff;
+    background: #ffffff;
     text-transform: lowercase;
     letter-spacing: 1px;
     color: #828282;
@@ -672,18 +738,19 @@ input:valid ~ .details, textarea:valid ~ .details {
 	}
 }
 
+
 .img-example
-{ 
+{
   position: absolute;
   right: 5%;
   width: 35vw;
+  transform: scale(2.1);
   animation: float 10s ease-in-out infinite;
 }
 
 .hover { 
   position: relative;
   transition: all 1s ease;
-  border-bottom: 0px solid transparent;
   left: 0;
   top: 0;
 }
@@ -692,8 +759,7 @@ input:valid ~ .details, textarea:valid ~ .details {
 {
   left: -10px;
   top: 10px;
-  text-shadow: 20px -20px #bbbbbb;
-  border-bottom: 10px solid #ff3f81;
+  text-shadow: 20px -20px rgba(0, 0, 0, 0.2);
   color: #ff3f81;
 }
 
@@ -760,3 +826,24 @@ input:valid ~ .details, textarea:valid ~ .details {
 .layer-7 {
   transform: translateZ(-300px);
 }
+
+/* Custom cursor
+
+[class^="cursor"]
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.cursor
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  mix-blend-mode: difference;
+  transition: all 100ms ease-out;
+} */

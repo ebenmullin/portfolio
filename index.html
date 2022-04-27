@@ -5,25 +5,16 @@
         <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script type="text/javascript">
-            $(window).on("scroll", function() {
-                if ($(window).scrollTop()) {
-                    $("nav").addClass("solid");
-                }else {
-                    $("nav").removeClass("solid");
-                }
-              })
-        </script>
     </head>
     <body>
         <!--Navigation Bar-->
         <nav>
             <div class="align left">
-                <img class="logo" src="assets/favicon.png" alt="EM">
+                <img id="logo" src="assets/favicon.png" alt="Logo">
             </div>
             <div class="align right">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html#home" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -35,31 +26,36 @@
         <section class="section-landing" id="home">
             <div class="aligner">
                 <h1>Welcome to my digital <span class="highlight hover">Portfolio</span></h1>
-                <p class="paragraph">Student | website and app developer | 3d modelling and animation | video editing | electronics</p>
+                <h3>Student | website and app developer | 3d modelling and animation | video editing | electronics</h3>
             </div>
-            <img class="img-example" src="https://docs-assets.developer.apple.com/published/a151730046f7ac186031a760fe890b92/15600/overview-hero@2x.png">
+            <img class="img-example" src="assets/favicon.png">
         </section>
 
-        <section class="content section-about">
+        <section class="section-skills" id="skills">
             <div class="aligner">
-                <div class="left">
-                    <h3 class="heading">About me</h3>
-                    <p class="paragraph">
-                        Confluera tracks and intercepts cyberattacks along its lifecycle in real-time, stitching together live events based on cause and effect instead of correlating past events after the breach.
-                    </p>
-                    <button class="button-styled"><a href="about.html">Read More</a></button>
+                <div class="img-container">
+                    <div class="mask">
+                        <img class="gsap-img" src="assets/keyboard.png">
+                    </div>
                 </div>
-                <div class="right">
-                    <img src="https://r1.ilikewallpaper.net/ipad-pro-wallpapers/download/99846/beautiful-landscape-5k-ipad-pro-wallpaper-ilikewallpaper_com.jpg">
+                <div class="img-container">
+                    <div class="mask">
+                        <img class="gsap-img" src="assets/windows.jpg">
+                    </div>
+                </div>
+                <div class="img-container">
+                    <div class="mask">
+                        <img class="gsap-img" src="assets/code.jpg">
+                    </div>
+                </div>
+                <div class="img-container">
+                    <div class="mask">
+                        <img class="gsap-img" src="assets/mac.jpg">
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="section-parallax">
 
-        </section>
-
-        <section class="content section-skills" id="skills">
             <div class="aligner">
                 <div class="left">
                     <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
@@ -83,7 +79,26 @@
                 </div>
             </div>
         </section>
-        <section class="content section-portfolio">
+        
+        <section class="section-parallax">
+            
+        </section>
+        <section class="section-about">
+            <div class="aligner">
+                <div class="left">
+                    <h3 class="heading">About me</h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eius sint, aliquam consequatur aspernatur officiis officia sit nostrum architecto adipisci eum temporibus quia ducimus sequi laboriosam? Blanditiis numquam adipisci maiores facilis explicabo debitis repellat, praesentium autem nihil cum vero quaerat rem. Nobis, quis minus asperiores impedit totam perferendis adipisci odio commodi eos dolore blanditiis quisquam est in pariatur laborum officiis veritatis quaerat id iusto accusantium consectetur ut. Placeat, nostrum velit est quae, inventore, fugit ipsum nesciunt accusamus commodi illum dignissimos? Ex nemo ut doloribus deleniti rem quaerat nostrum dolor tempore voluptate, eius assumenda minima sequi, quia amet quae dolorem consequuntur!
+                    </p>
+                    <button class="button-styled"><a href="about.html">Read More</a></button>
+                </div>
+                <div class="right">
+                    <img src="https://r1.ilikewallpaper.net/ipad-pro-wallpapers/download/99846/beautiful-landscape-5k-ipad-pro-wallpaper-ilikewallpaper_com.jpg">
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-portfolio">
             <div class="aligner">
                 <h3 class="heading">Portfolio</h3>
                 <p class="paragraph">
@@ -161,6 +176,12 @@
             </div>
         </footer>
 
-        <script type="module" src="./client.js"></script>
+        <div class="cursor"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script src="index.js" charset="utf-8"></script>
     </body>
 </html> 
