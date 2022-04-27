@@ -178,7 +178,7 @@ nav ul li a:hover
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background-image: url("/assets/foreground.png");
+  background-image: url(".assets/foreground.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: bottom;
