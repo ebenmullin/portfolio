@@ -21,15 +21,17 @@ body
 .overlay
 {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  top: 0%;
   z-index: 2;
   background-color: #f4b6c2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 nav
@@ -104,9 +106,7 @@ nav
 .nav-links li a:hover
 {
   transform: scale(1.2);
-  z-index: 2;
   border-bottom: 2px solid #ff3f81;
-  opacity: 1;
 }
 
 .nav-links a.active
@@ -205,7 +205,6 @@ nav
 .section-landing .aligner
 {
   position: relative;
-  overflow: hidden;
   width: 50%;
   margin: 0 0 0 5%;
   text-align: center;
@@ -370,24 +369,7 @@ nav
   color: #1a1a20;
 }
 
-.highlight
-{
-  font-family: "Quicksand", sans-serif;
-  font-weight: 800;
-  color: #2196f3;
-}
-
-.intro
-{
-  opacity: 0;
-  transform: translateY(5vh);
-}
-
-.welcome
-{
-  opacity: 0;
-  transform: translateY(20vh);
-}
+/* TEXT - HEADERS - FONTS */
 
 h1
 {
@@ -396,18 +378,6 @@ h1
   text-transform: capitalize;
   font-size: 5vw;
   color: #1a1a20;
-}
-
-.wrapper-rolling-text {
-  background-color: #2a2a30;
-  white-space: nowrap;
-}
-
-.rolling-text {
-  color: #bbbbbb;
-  font-family: "Quicksand", sans-serif;
-  font-size: 6vw;
-  display: inline-block;
 }
 
 h2
@@ -433,6 +403,13 @@ h4
   color: #ff3f81;
 }
 
+p
+{
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: #bbbbbb;
+}
+
 .heading
 {
   font-size: 3rem;
@@ -441,6 +418,29 @@ h4
   display: inline-flex;
 }
 
+.marquee
+{
+  color: #cccccc;
+}
+
+.highlight
+{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+  color: #2196f3;
+}
+
+.intro
+{
+  opacity: 0;
+  transform: translateY(5vh);
+}
+
+.welcome
+{
+  opacity: 0;
+  transform: translateY(20vh);
+}
 .button-styled a
 {
   color: #ff3f81;
@@ -453,12 +453,6 @@ h4
   color: #ffffff;
 }
 
-p
-{
-  font-size: 1.2rem;
-  line-height: 150%;
-  color: #bbbbbb;
-}
 
 body .back-image {
   position: absolute;
@@ -884,7 +878,7 @@ input:valid ~ .details, textarea:valid ~ .details {
   transition: all 100ms ease-out;
 } */
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .toggle-button
   {
     display: flex;
@@ -914,6 +908,12 @@ input:valid ~ .details, textarea:valid ~ .details {
     color: #ff3f81;
   }
 
+  .nav-links li a:hover
+  {
+    border-bottom: transparent;
+    color: #ff3f81;
+  }
+
   .nav-links.active
   {
     display: flex;
@@ -928,8 +928,7 @@ input:valid ~ .details, textarea:valid ~ .details {
   .section-landing .aligner
   {
     width: 90%;
-    margin: 5% auto;
-    text-align: center;
+    margin: 0% auto;
   }
  
   .welcome
@@ -939,10 +938,7 @@ input:valid ~ .details, textarea:valid ~ .details {
 
   .img-example
   {
-    position: relative;
-    margin: auto;
-    width: 60vw;
-    left: 0;
+    display: none;
   }
 
 }

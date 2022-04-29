@@ -49,9 +49,33 @@ let tl = gsap.timeline({
   defaults: {ease: "power4.inOut", duration: 2}
 });
 
+// let contactTransition = gsap.timeline({paused: true});
+  
+
 tl
-  .to(".intro", {opacity: 1, y: 0, duration: 1})
-  .to(".overlay", {height: 0, display: "none", duration: 1})
-  .to("nav", {opacity: 1, y: 0, duration: 0.5})
-  .to(".welcome", {opacity: 1, y: 0, duration: 1})
-  // .to(".section-landing", {width: 95 + "%", height: 95 + "vh", opacity: 1, "border-radius": 25, duration: 2})
+.to(".intro", {opacity: 1, y: 0, duration: 1})
+.to(".overlay", {height: 0, display: "none", duration: 1, ease: "power1.in"})
+.to("nav", {opacity: 1, y: 0, duration: 0.5})
+.to(".welcome", {opacity: 1, y: 0, duration: 1});
+// .to(".section-landing", {width: 95 + "%", height: 95 + "vh", opacity: 1, "border-radius": 25, duration: 2})
+
+// contactTransition
+//   .to(".section-contact", {x: 0 + "%", duration: 1})
+
+// $(".contact").click(function() {
+//   contactTransition.play(0);
+// });
+
+$(document).mousemove(function(event) {
+  var xPos = (event.clientX / $(window).width())-0.5,
+      yPos = (event.clientY/$(window).height())-0.5,
+      plane = $('.section-landing');
+ 
+ TweenLite.to(plane, 0.5, {
+   rotationY: 5 * xPos, 
+   rotationX: 5 * yPos,
+   ease: "Power4.inOut",
+   transformPerspective: 1000,
+   transformOrigin: "center"
+ });
+});
