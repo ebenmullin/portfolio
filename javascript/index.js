@@ -53,15 +53,16 @@ let tl = gsap.timeline({
   
 
 tl
-.to(".intro", {opacity: 1, y: 0, duration: 1})
-.to(".overlay", {height: 0, display: "none", duration: 1, ease: "power1.in"})
-.to("nav", {opacity: 1, y: 0, duration: 0.5})
-.to(".welcome", {opacity: 1, y: 0, duration: 1});
-// .to(".section-landing", {width: 95 + "%", height: 95 + "vh", opacity: 1, "border-radius": 25, duration: 2})
+  .set("body", {overflow: "hidden"})
+  .to(".intro", {opacity: 1, y: 0, duration: 1})
+  .to(".overlay", {height: 0, display: "none", duration: 1, ease: "power1.in"})
+  .set("body", {overflow: "auto"})
+  .to("nav", {opacity: 1, y: 0, duration: 0.5})
+  // .from(".section-landing", {width: 100 + "%", height: 100 + "vh", "border-radius": 0, margin: 0})
+  .to(".welcome", {opacity: 1, y: 0, duration: 1})
 
 // contactTransition
 //   .to(".section-contact", {x: 0 + "%", duration: 1})
-
 // $(".contact").click(function() {
 //   contactTransition.play(0);
 // });
