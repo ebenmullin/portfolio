@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 *
 {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -16,6 +17,12 @@ body
   background: #1a1a1d;
   transition: 500ms;
   overflow-x: hidden;
+  font-size: 1.5rem;
+}
+
+h1, h2, h3, .highlight
+{
+  font-family: 'DM Serif Display', serif;
 }
 
 .overlay
@@ -102,7 +109,6 @@ nav
   -webkit-font-smoothing: antialiased;
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
-  font-size: 1.5rem;
   letter-spacing: 2px;
   overflow: hidden;
   transition: 300ms;
@@ -122,8 +128,6 @@ nav
 
 .button-styled
 {
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.5rem;
   color: #ff3f81;
   transition: .5s;
   outline: none;
@@ -216,35 +220,31 @@ nav
   background-color: #f0f0f5;
 }
 
-
 .section-about .aligner
 {
   width: 80%;
-  padding: 25px;
   margin: 0 auto;
 }
 
 .section-about .aligner .left
 {
-  padding-right: 25px;
+  position: relative;
   width: 40%;
   float: left;
+  z-index: 2;
 }
 
 .section-about .aligner .right
 {
   width: 50%;
   margin-left: 50%;
-  overflow: hidden;
 }
 
 .section-about .aligner .right img
 {
-  width: 1000px;
-  height: 1000px;
-  margin-top: -400px;
+  width: 100%;
+  height: 100%;
   border-radius: 1vw;
-  background-position: center;
   display: block;
   transform: rotate3d(0, 0, 0, 0deg);
   box-shadow: 0px 0px 0px transparent;
@@ -351,41 +351,54 @@ nav
 }
 
 /* TEXT - HEADERS - FONTS */
+.bg-text
+{
+  font-family: 'Rubik Mono One', sans-serif;
+  position: sticky;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  top: 300px;
+  font-size: 24rem;
+  color: #e5e5e5;
+  z-index: 0;
+}
 
 h1
 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 800;
+  font-weight: normal;
   font-size: 5vw;
   color: #1a1a1d;
 }
 
 h2
 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 800;
+  font-weight: normal;
   font-size: 4rem;
   color: #f0f0f5;
 }
 
 h3
 {
+  font-weight: normal;
   font-size: 3rem;
   color: #f0f0f5;
+  margin-bottom: 25px;
+  border-bottom: 5px solid #ff3f81;
+  display: inline-flex;
 }
 
 h4
 {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: normal;
+  font-size: 2rem;
   color: #ff3f81;
 }
 
-p
+p, a
 {
-  font-size: 1.5rem;
+  color: #bbbbbb;
   line-height: 150%;
-  color: #cccccc;
 }
 
 .paragraph
@@ -395,11 +408,7 @@ p
 
 .heading
 {
-  font-size: 3rem;
-  margin-bottom: 25px;
-  border-bottom: 5px solid #ff3f81;
   color: #1a1a1d;
-  display: inline-flex;
 }
 
 .marquee
@@ -409,8 +418,6 @@ p
 
 .highlight
 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 800;
   color: #2196f3;
 }
 
@@ -607,7 +614,6 @@ body .back-image img {
 
 .footer-col ul li a
 {
-  font-size: 1.2rem;
   color: #bbbbbb;
   text-decoration: none;
   display: block;
@@ -652,7 +658,6 @@ body .back-image img {
   line-height: 40px;
   text-align: center;
   vertical-align: middle;
-  font-size: 1.2rem;
   background-color: #3a3a40;
   color: #bbbbbb;
   transition: all 300ms ease;
@@ -698,7 +703,6 @@ textarea {
   color: #f0f0f5;
   border: none;
   outline: none;
-  font-size: 1.2rem;
   resize: none;
   width: 100%;
   height: 100%;
@@ -709,7 +713,6 @@ textarea {
   padding: 20px 10px 10px;
   top: 0px;
   left: 0px;
-  font-size: 1.2rem;
   color: #bbbbbb;
   transition: all 0.3s ease;
   pointer-events: none;
@@ -718,7 +721,7 @@ textarea {
 input:focus ~ .details, textarea:focus ~ .details,
 input:valid ~ .details, textarea:valid ~ .details {
   position: absolute;
-  top: -1.2rem;
+  top: -1.5rem;
   color: #2196f3;
   font-size: 1rem;
 }

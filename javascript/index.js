@@ -54,7 +54,7 @@ let tl = gsap.timeline({
 
 tl
   .set("body", {overflow: "hidden"})
-  .to(".intro", {opacity: 1, y: 0, duration: 1})
+  .to(".intro", {opacity: 1, y: 0, duration: 1, stagger: .2})
   .to(".overlay", {height: 0, display: "none", duration: 1, ease: "power1.in"})
   .set("body", {overflow: "auto"})
   .to("nav", {opacity: 1, y: 0, duration: 0.5})
