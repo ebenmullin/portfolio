@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
 
 *
 {
@@ -20,9 +21,14 @@ body
   font-size: 1.5rem;
 }
 
-h1, h2, h3, .highlight
+h2, h3, h4
 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, .highlight
+{
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .overlay
@@ -66,7 +72,7 @@ nav
 
 .expanded .nav-links li a
 {
-  color: #f0f0f5;
+  color: #e0e0e5;
   mix-blend-mode: exclusion;
 }
 
@@ -222,46 +228,16 @@ nav
 
 .section-about .aligner
 {
+  position: relative;
   width: 80%;
   margin: 0 auto;
-}
-
-.section-about .aligner .left
-{
-  position: relative;
-  width: 40%;
-  float: left;
-  z-index: 2;
-}
-
-.section-about .aligner .right
-{
-  width: 50%;
-  margin-left: 50%;
-}
-
-.section-about .aligner .right img
-{
-  width: 100%;
-  height: 100%;
-  border-radius: 1vw;
-  display: block;
-  transform: rotate3d(0, 0, 0, 0deg);
-  box-shadow: 0px 0px 0px transparent;
-  transition: all 1s ease;
-}
-
-.section-about .aligner .right img:hover
-{
-  transform: rotate3d(1, -1, 1, 45deg);
-  box-shadow: 20px 20px 20px #000000;
 }
 
 .section-parallax
 {
   width: 100%;
   height: 50vh;
-  background-image: url("https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg");
+  background-image: url("/assets/5793189.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -269,26 +245,28 @@ nav
 
 .section-skills
 {
+  scroll-margin-top: 25vh;
   width: 100%;
   height: 100%;
+  padding: 5vh 0;
   background-color: #1a1a1d;
 }
 
 .section-skills .aligner {
   width: 80%;
   height: 100%;
-  padding: 25px;
+  text-align: center;
   margin: 0 auto;
 }
 
-.section-skills .aligner .img-container
+.section-portfolio .aligner .img-container
 {
   margin: 20% 0;
   width: 70%;
   position: relative;
 }
 
-.section-skills .aligner .img-container .mask
+.section-portfolio .aligner .img-container .mask
 {
   visibility: hidden;
   position: relative;
@@ -297,7 +275,7 @@ nav
   overflow: hidden;
 }
 
-.section-skills .aligner .img-container .mask img
+.section-portfolio .aligner .img-container .mask img
 {
   height: 100%;
   width: 100%;
@@ -340,7 +318,7 @@ nav
   width: 100%;
   height: 100%;
   padding: 5vh 0;
-  background-color: #f0f0f5;
+  background-color: #1a1a1d;
 }
 
 .section-portfolio .aligner
@@ -358,9 +336,9 @@ nav
   margin: auto;
   padding: 0;
   text-align: center;
-  top: 300px;
-  font-size: 24rem;
-  color: #e5e5e5;
+  top: 25vh;
+  font-size: 40vh;
+  color: #e0e0e5;
   z-index: 0;
 }
 
@@ -437,6 +415,7 @@ p, a
   color: #ff3f81;
   text-decoration: none;
   transition: all 300ms ease;
+  font-size: 1.5rem;
 }
 
 .button-styled:hover a
@@ -469,12 +448,6 @@ body .back-image img {
   border-radius: 30px;
   margin-bottom: 8vh;
   box-shadow: 10px 10px 10px #000000;
-}
-
-.page-portfolio
-{
-  margin-top: 20vh;
-  text-align: center;
 }
 
 .image-grid
@@ -565,14 +538,20 @@ body .back-image img {
 .footer
 {
   background-color: #2a2a30;
-  padding: 30px 0;
-  height: 430px;
+  padding: 5vh 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
   max-width: 70%;
   margin: auto;
   position: relative;
+}
+
+.container h1
+{
+  text-align: center;
 }
 
 .row
@@ -584,7 +563,7 @@ body .back-image img {
 .footer-col
 {
   margin-bottom: 30px;
-  width: 20%;
+  width: 22%;
   padding: 0 15px;
 }
 
@@ -629,7 +608,10 @@ body .back-image img {
 
 .footer-bottom
 {
-  padding: 20px 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1d;
+  padding: 5vh 0;
 }
 
 .copyright
@@ -672,28 +654,46 @@ body .back-image img {
 
 .footer-contact
 {
-  width: 400px;
+  width: 34%;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.footer-contact h4
+{
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.footer-contact h4::before
+{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #ff3f81;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
 
 .input-box, input
 {
   position: relative;
+  width: 50%;
   float: left;
-  width: 150px;
   border-bottom: 2px solid #bbbbbb;
 }
 
 .wide
 {
-  width: 400px;
+  width: 100%;
   background-color: #3a3a40;
   margin-top: 10px;
-}
-
-.box-right
-{
-  float: right;
-  width: 240px;
 }
 
 input,
@@ -706,11 +706,12 @@ textarea {
   resize: none;
   width: 100%;
   height: 100%;
+  font-size: 1.5rem;
 }
 
 .input-box .details {
   position: absolute;
-  padding: 20px 10px 10px;
+  padding: 15px 10px;
   top: 0px;
   left: 0px;
   color: #bbbbbb;
@@ -721,7 +722,7 @@ textarea {
 input:focus ~ .details, textarea:focus ~ .details,
 input:valid ~ .details, textarea:valid ~ .details {
   position: absolute;
-  top: -1.5rem;
+  top: -1rem;
   color: #2196f3;
   font-size: 1rem;
 }
@@ -774,96 +775,11 @@ input:valid ~ .details, textarea:valid ~ .details {
 
 .hover:hover
 {
-  left: -10px;
-  top: 10px;
-  text-shadow: 20px -20px rgba(0, 0, 0, 0.2);
+  left: -5px;
+  top: 5px;
+  text-shadow: 10px -10px rgba(0, 0, 0, 0.2);
   color: #ff3f81;
 }
-
-.parallax
-{
-  background: #cccccc;
-  perspective: 100px;
-  height: 100vh;
-  width: 100%;
-  overflow-y: auto;
-  position: absolute;
-}
-
-.parallax-layer
-{
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  
-}
-
-.parallax-layer img
-{
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.parallax-cover
-{
-  background: #2D112B;
-  display: block;
-  position: absolute;
-  top: 100%;
-  height: 2000px;
-  z-index: 2;
-}
-
-.layer-1 {
-  transform: translateZ(0px);
-}
-
-.layer-2 {
-  transform: translateZ(-50px);
-}
-
-.layer-3 {
-  transform: translateZ(-100px);
-}
-
-.layer-4 {
-  transform: translateZ(-150px);
-}
-
-.layer-5 {
-  transform: translateZ(-200px);
-}
-
-.layer-6 {
-  transform: translateZ(-250px);
-}
-
-.layer-7 {
-  transform: translateZ(-300px);
-}
-
-/* Custom cursor
-
-[class^="cursor"]
-{
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-.cursor
-{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #f0f0f5;
-  mix-blend-mode: difference;
-  transition: all 100ms ease-out;
-} */
 
 @media (max-width: 1080px) {
   .toggle-button
