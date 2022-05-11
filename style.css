@@ -5,10 +5,10 @@
 
 *
 {
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -82,7 +82,6 @@ nav
 #logo
 {
   height: 60px;
-  transform: scale(2);
   transition: 300ms;
 }
 
@@ -237,6 +236,15 @@ nav
   margin: 0 auto;
 }
 
+.section-skills
+{
+  width: 100%;
+  height: 100%;
+  padding: 5vh 0;
+  background-color: #f0f0f5;
+  text-align: center;
+}
+
 .section-parallax
 {
   width: 100%;
@@ -247,7 +255,7 @@ nav
   background-repeat: no-repeat;
 }
 
-.section-skills
+.section-cv
 {
   scroll-margin-top: 25vh;
   width: 100%;
@@ -256,36 +264,46 @@ nav
   background-color: #1a1a1d;
 }
 
-.section-skills .aligner {
+.section-cv .aligner {
   width: 80%;
   height: 100%;
-  text-align: center;
   margin: 0 auto;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40rem);
+  justify-content: center;
 }
 
 .card
 {
-  margin: auto;
-  padding: 2rem;
   overflow: hidden;
-  border-radius: 1rem;
-  background-color: #1a1a1d;
-  box-shadow: 5px 5px 10px #0a0a0c,
-  -5px -5px 10px #2a2a2e;
+  background-color: #e0e0e5;
+  box-shadow:  10px 10px 20px #5a5a5c,
+  -10px -10px 20px #ffffff;
   text-align: center;
-  width: 25%
+  border-radius: 1rem;
+  position: relative;
+  margin: 3rem;
+  transition: all 500ms ease;
+}
+
+.card:hover
+{
+  transform: scale(1.1);
+  box-shadow:  20px 20px 40px #5a5a5c,
+  -20px -20px 40px #ffffff;
 }
 
 .card img
 {
   width: 100%;
-  border-radius: 1rem;
 }
 
 .card h3
 {
   text-transform: capitalize;
-  margin-bottom: 30px;
   position: relative;
 }
 
@@ -299,6 +317,18 @@ nav
   height: 2px;
   box-sizing: border-box;
   width: 50px;
+}
+
+.card p
+{
+  margin: 1rem;
+}
+
+.card-footer
+{
+  margin-top: auto;
+  background-color: #f0f0f5;
+  padding: 1rem;
 }
 
 .section-portfolio .aligner .img-container
@@ -331,30 +361,6 @@ nav
   float: right;
 }
 
-.section-skills .aligner .left {
-  width: 30%;
-  float: left;
-}
-
-.section-skills .aligner .left img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  box-shadow: 0px 0px 0px transparent;
-  transition: all 1s ease;
-}
-
-.section-skills .aligner .left img:hover
-{
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-}
-
-.section-skills .aligner .right  {
-  width: 70%;
-  height: 100%;
-  margin-left: 32%;
-}
-
 .section-portfolio
 {
   width: 100%;
@@ -374,12 +380,10 @@ nav
 .bg-text
 {
   font-family: 'Rubik Mono One', sans-serif;
-  position: sticky;
   margin: auto;
   padding: 0;
-  text-align: center;
-  top: 25vh;
-  font-size: 40vh;
+  text-align: right;
+  font-size: 20vh;
   color: #e0e0e5;
   z-index: 0;
 }
@@ -559,7 +563,7 @@ p, a
 }
 
 .container {
-  max-width: 70%;
+  max-width: 80%;
   margin: auto;
   position: relative;
 }
@@ -842,7 +846,7 @@ input:valid ~ .details, .message:valid ~ .details {
   color: #ff3f81;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 900px) {
   .toggle-button
   {
     display: flex;
@@ -883,12 +887,6 @@ input:valid ~ .details, .message:valid ~ .details {
     display: flex;
   }
 
-  .nav
-  {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .section-landing .aligner
   {
     width: 90%;
@@ -905,10 +903,15 @@ input:valid ~ .details, .message:valid ~ .details {
     display: none;
   }
 
+  .card
+  {
+    width: 100%;
+  }
+
 }
 
-@media (min-width: 1920px) {
-  a, p, input, textarea
+@media (min-width: 1620px) {
+  a, p, li, input, textarea
   {
     font-size: 1.5rem;
   }
@@ -922,4 +925,10 @@ input:valid ~ .details, .message:valid ~ .details {
   {
   padding: 5vh 10vw;
   }
+
+  #logo
+  {
+    transform: scale(2);
+  }
+
 }

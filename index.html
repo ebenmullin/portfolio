@@ -4,6 +4,7 @@
         <title>Eben Mullin | my Portfolio</title>
         <meta name="title" content="Eben Mullin | my Portfolio">
         <meta name="description" content="Digital Portfolio website for Eben Mullin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -37,7 +38,7 @@
                 <ul>
                     <li><a href="index.html#home" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#skills">CV</a></li>
+                    <li><a href="#cv">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <button class="contact button-styled"><a href="#">Contact Me</a></button>
                 </ul>
@@ -61,10 +62,8 @@
             <div class="banner"></div>
         </section>
         
-        <section class="section-about light">
-            <div class="bg-text">
-                About
-            </div>
+        <section class="section-about">
+            <div class="bg-text">About</div>
             <div class="aligner">
                 <h3 class="heading">About me</h3>
                 <p class="paragraph">
@@ -82,70 +81,54 @@
             </div>
         </section>
 
-        <section class="section-skills" id="skills">
-              
-            <div class="aligner">
-                <h3>My Skills: .. Is this too dark?.. noo its just midnight</h3>
-                <p class="paragraph">
-                    Need to fix all of this so dont look
-
-                    <a href="https://i.pinimg.com/736x/84/21/4b/84214bf9bdca91c2a57d552999c1ece2.jpg">Going to do this in the future</a>
-
-
-                    
-                    <br>
-                    <span class="highlight">TouchPotato#9521</span>
-                </p>
-
-                <div class="row">
-                    <div class="card">
-                        <img src="assets/code.jpg">
-                        <div class="card-text">
-                            <span class="date"></span>
-                            <h3>Coding</h3>
-                            <p>i think im pretty good at coding. ive got about 2 years of experience with html and css and 2 months of javascript but im picking it up quite fast</p>
-                        </div>
-                        <div class="card-stats">
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/assets/5793189.jpg">
-                        <div class="card-text">
-                            <span class="date"></span>
-                            <h3>UI Design</h3>
-                            <p>i dont plan my website. i just code it and then it normally looks like sh#t so then i redo over and over again. :thumbs-up:</p>
-                        </div>
-                        <div class="card-stats">
-    
-                        </div>
-                    </div>
-    
-                    <div class="card">
-                        <img src="/assets/mac.jpg">
-                        <div class="card-text">
-                            <h3>Branding</h3>
-                            <p>Uhm so... yea i dont even no what branding is really: but i think that my website does it good??
-                            </p>
-                        </div>
+        <section class="section-skills">
+            <div class="bg-text">Skills</div>
+            <h3 class="heading">My Skills:</h3>
+            <div class="wrapper-grid">
+                <div class="card">
+                    <img src="assets/code.jpg">
+                    <h3 class="heading">Coding</h3>
+                    <p class="paragraph">i think im pretty good at coding. ive got about 2 years of experience with html and css and 2 months of javascript but im picking it up quite fast</p>
+                    <div class="card-footer">
+                        <h4>★★★★★</h4>
                     </div>
                 </div>
-                
+    
+                <div class="card">
+                    <img src="assets/img-3.png">
+                    <h3 class="heading">UI Design</h3>
+                    <p class="paragraph">I dont plan my website. i just code it and then it normally looks like sh#t so then i redo over and over again. :thumbs-up:</p>
+                    <div class="card-footer">
+                        <h4>★★★☆☆</h4>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="https://miro.medium.com/max/1200/1*UROzUJQfkMtCO1bKQql3HA.png">
+                    <h3 class="heading">User Experience</h3>
+                    <p class="paragraph">need to work on my user Experience ALOT. like my website it so garbage for actual use. the navbar mostly</p>
+                    <div class="card-footer">
+                        <h4>★★☆☆☆</h4>
+                    </div>
+                </div>
+            </div>
 
+        </section>
+
+        <section class="section-cv" id="cv">
+            
+            <div class="aligner">
                 <h3>Curriculum Vitae</h3>
-                <p class="paragraph">
-                    |2018 - 2019? Year 9 excellence in electronics award<br>
-                    |2020 - 2021? Year 11 excellence in electronics award<br>
-                    | 2021 - doing dishes at a restaurant 💀
-                    hire meeee
-                    
-                </p>
+                <h4>Previous Achievements</h4>
+                <ul>
+                    <li>| 2018 - 2019? Year 9 excellence in electronics award</li>
+                    <li>| 2020 - 2021? Year 11 excellence in electronics award</li>
+                    <li>| 2021 - doing dishes at a restaurant 💀</li>
+                </ul>
             </div>
         </section>
-        
-        <section class="section-parallax">
-            
-        </section>
+
+        <section class="section-parallax"></section>
         
         <section class="section-portfolio light">
             <div class="aligner">
@@ -153,7 +136,7 @@
                 <p class="paragraph">
                     Scroll down to see some of the projects I have done below
                 </p>
-
+                
                 <div class="img-container">
                     <div class="mask">
                         <img src="assets/keyboard.png">
