@@ -71,3 +71,16 @@ $(document).mousemove(function(event) {
    transformOrigin: "center"
  });
 });
+
+window.addEventListener('load',() =>{
+  let progressBars = document.querySelectorAll('.progress-bar');
+  let values = [
+      '60%',
+      '90%',
+      '70%',
+      '40%',
+  ];
+  progressBars.forEach((progress,index)=>{
+      progress.style.width = values[index];
+  })
+})
