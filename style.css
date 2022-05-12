@@ -70,14 +70,9 @@ nav
 {
   padding: 1vh 1vw;
   box-shadow: 0 2px 10px #000000;
-  backdrop-filter: blur(5px);
+  background-color: #1a1a1d;
 }
 
-.expanded .nav-links li a
-{
-  color: #e0e0e5;
-  mix-blend-mode: exclusion;
-}
 
 #logo
 {
@@ -146,7 +141,6 @@ nav
   border: 2px solid #ff3f81;
   border-radius: 10px;
   text-transform: uppercase;
-  font-size: 1.2rem;
 }
 
 .button-styled:hover
@@ -236,6 +230,18 @@ nav
   margin: 0 auto;
 }
 
+.left
+{
+  width: 50%;
+  float: left;
+}
+
+.right
+{
+  width: 50%;
+  float: right;
+}
+
 .section-skills
 {
   width: 100%;
@@ -272,7 +278,7 @@ nav
 
 .wrapper-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 40rem);
+  grid-template-columns: repeat(auto-fit, 29rem);
   justify-content: center;
 }
 
@@ -307,18 +313,6 @@ nav
   position: relative;
 }
 
-.card h3::before
-{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #ff3f81;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-
 .card p
 {
   margin: 1rem;
@@ -329,6 +323,21 @@ nav
   margin-top: auto;
   background-color: #f0f0f5;
   padding: 1rem;
+}
+
+.section-portfolio
+{
+  width: 100%;
+  height: 100%;
+  padding: 5vh 0;
+  background-color: #1a1a1d;
+}
+
+.section-portfolio .aligner
+{
+  width: 80%;
+  padding: 25px;
+  margin: 0 auto;
 }
 
 .section-portfolio .aligner .img-container
@@ -361,20 +370,6 @@ nav
   float: right;
 }
 
-.section-portfolio
-{
-  width: 100%;
-  height: 100%;
-  padding: 5vh 0;
-  background-color: #1a1a1d;
-}
-
-.section-portfolio .aligner
-{
-  width: 80%;
-  padding: 25px;
-  margin: 0 auto;
-}
 
 /* TEXT - HEADERS - FONTS */
 .bg-text
@@ -405,10 +400,10 @@ h2
 h3
 {
   font-weight: normal;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #f0f0f5;
   margin-bottom: 25px;
-  border-bottom: 5px solid #ff3f81;
+  border-bottom: 2px solid #ff3f81;
   display: inline-flex;
 }
 
@@ -419,15 +414,15 @@ h4
   color: #ff3f81;
 }
 
-p, a
+a, p, button
 {
+  font-size: 1.2rem;
   color: #bbbbbb;
   line-height: 150%;
 }
 
 .paragraph
 {
-  font-size: 1.5rem;
   color: #8a8a90;
 }
 
@@ -749,7 +744,7 @@ textarea
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #bbbbbb;
   transition: all 0.3s ease;
   pointer-events: none;
@@ -765,14 +760,13 @@ input:valid ~ .details, .message:valid ~ .details {
 
 .submit
 {
-  width: 50%;
+  width: 100%;
   height: 100%;
   background: #2a2a30;
   border-radius: 1rem;
   border: none;
   margin: 15px 0;
   padding: 1rem;
-  font-size: 1.5rem;
   cursor: pointer;
   color: #bbbbbb;
   box-shadow: 2px 2px 10px #111113,
@@ -782,14 +776,8 @@ input:valid ~ .details, .message:valid ~ .details {
 
 .submit:hover
 {
-  box-shadow: 5px 5px 10px #111113,
-  -5px -5px 10px #43434d;
-}
-
-.submit:active{
   box-shadow: inset 2px 2px 10px #111113,
   inset -2px -2px 10px #43434d;
-  font-size: 1.4rem;
 }
 
 ::-webkit-scrollbar {
@@ -846,6 +834,29 @@ input:valid ~ .details, .message:valid ~ .details {
   color: #ff3f81;
 }
 
+@media (max-width: 480px) {
+
+  .section-portfolio .aligner .img-container
+{
+  width: 100%;
+}
+
+.section-portfolio .aligner .img-container .mask
+{
+  width: 100%;
+}
+
+  .footer-col
+  {
+    width: 100%;
+  }
+
+  .footer-contact
+  {
+    width: 100%;
+  }
+}
+
 @media (max-width: 900px) {
   .toggle-button
   {
@@ -893,7 +904,7 @@ input:valid ~ .details, .message:valid ~ .details {
     margin: 0% auto;
   }
  
-  .welcome
+  h1
   {
     font-size: 9vw;
   }
@@ -910,10 +921,15 @@ input:valid ~ .details, .message:valid ~ .details {
 
 }
 
-@media (min-width: 1620px) {
-  a, p, li, input, textarea
+@media (min-width: 1920px) {
+  a, p, .details, button, li, input, textarea
   {
     font-size: 1.5rem;
+  }
+
+  h3
+  {
+    font-size: 3rem;
   }
 
   h4
@@ -929,6 +945,11 @@ input:valid ~ .details, .message:valid ~ .details {
   #logo
   {
     transform: scale(2);
+  }
+
+  .wrapper-grid
+  {
+    grid-template-columns: repeat(auto-fit, 35rem);
   }
 
 }
