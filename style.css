@@ -598,6 +598,7 @@ a, p, button
 
 .footer
 {
+  display: flex;
   background-color: #2a2a30;
   padding: 5vh 0 0;
   width: 100%;
@@ -605,6 +606,7 @@ a, p, button
 }
 
 .container {
+  display: block;
   width: 80%;
   margin: auto;
   position: relative;
@@ -623,6 +625,8 @@ a, p, button
 
 .footer-col
 {
+  position: relative;
+  display: block;
   margin-bottom: 2rem;
   width: 22%;
   padding: 0 1rem;
