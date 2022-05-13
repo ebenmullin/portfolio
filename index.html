@@ -81,11 +81,6 @@
                 </div>
                 <div class="right">
                     <h3 class="heading">Basic Info</h3>
-                    <ul>
-                        <li>Age: 16</li>
-                        <li>Gender: Male</li>
-                        <li>Skills: Coding, 3D moddeling, Electronics, Design</li>
-                    </ul>
                     <table>
                         <tr>
                             <th>Name:</th>
@@ -98,6 +93,10 @@
                           <tr>
                             <th>Gender:</th>
                             <td>Male</td>
+                          </tr>
+                          <tr>
+                              <th>Skills</th>
+                              <td>Coding, 3D moddeling, Electronics, Design</td>
                           </tr>
                     </table>
                 </div>
@@ -165,7 +164,7 @@
             </div>
         </section>
         
-        <section>
+        <section class="section-progress">
             <h3>Programing Languages</h3>
 
             <div class="progress-box">
@@ -206,11 +205,27 @@
             <div class="aligner">
                 <h3>Curriculum Vitae</h3>
                 <h4>Previous Achievements</h4>
-                <ul>
-                    <li>| 2018 - 2019? Year 9 excellence in electronics award</li>
-                    <li>| 2020 - 2021? Year 11 excellence in electronics award</li>
-                    <li>| 2021 - doing dishes at a restaurant 💀</li>
-                </ul>
+                <table>
+                    <tr>
+                        <th>Award</th>
+                        <td>| 2018 - 2019? Year 9 excellence in electronics award</td>
+                    </tr>
+                    <tr>
+                        <th>Award</th>
+                        <td>| 2020 - 2021? Year 11 excellence in electronics award</td>
+                    </tr>
+                    <tr>
+                        <th>Learner Me</th>
+                        <td>6 hour Coding course on wedenesdays at Learner Me</td>
+                    </tr>
+                </table>
+                <h4>Work Experience</h4>
+                <table>
+                    <tr>
+                        <th>Eden Cafe & Restaurant</th>
+                        <td>| 2021 - doing dishes at a restaurant 💀</td>
+                    </tr>
+                </table>
             </div>
         </section>
 
@@ -303,16 +318,18 @@
                                 <input type="text" name="name" required>
                                 <span class="details">Full Name</span>
                             </div>
-                            <div class="input-box box-right">
+                            <div class="input-box">
                                 <input type="email" name="email" required>
                                 <span class="details">Email</span>
                             </div>
-                            <div class="input-box wide">
+                            <div class="input-box">
                                 <input type="text" name="subject" required>
                                 <span class="details">Subject</span>
                             </div>
-                            <span class="details">Message</span>
-                            <textarea required></textarea>
+                            <div class="input-box">
+                                <textarea required rows="2"></textarea>
+                                <span class="details">Message</span>
+                            </div>
 
                             <button class="submit">Send Message</button>
                         </form>
