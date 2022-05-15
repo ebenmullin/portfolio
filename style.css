@@ -624,8 +624,15 @@ a, p, button
 .footer-col
 {
   margin-bottom: 2rem;
-  width: 22%;
   padding: 0 1rem;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.footer-col.lg
+{
+  flex: 0 0 30%;
+  max-width: 30%;
 }
 
 .footer-col h4
@@ -724,7 +731,8 @@ a, p, button
 
 .footer-contact
 {
-  width: 34%;
+  flex: 0 0 30%;
+  max-width: 30%;
   height: 100%;
   box-sizing: border-box;
   padding: 2rem;
