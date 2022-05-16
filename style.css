@@ -599,6 +599,7 @@ a, p, button
 
 .footer
 {
+  display: flex;
   background-color: #2a2a30;
   padding: 5vh 0;
   width: 100%;
