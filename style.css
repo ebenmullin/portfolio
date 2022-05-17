@@ -187,6 +187,15 @@ nav
   background-color: #cccccc;
 }
 
+.section-landing img
+{
+  position: absolute;
+  right: 5%;
+  width: 35vw;
+  transform: scale(2.1);
+  animation: float 10s ease-in-out infinite;
+}
+
 .section-landing .aligner
 {
   position: relative;
@@ -223,6 +232,15 @@ nav
   background-color: #f0f0f5;
 }
 
+.section-about img
+{
+  display: block;
+  margin: auto;
+  width: 256px;
+  border-radius: 50%;
+  background: #f0f0f5;
+}
+
 .section-about .aligner
 {
   position: relative;
@@ -232,14 +250,13 @@ nav
 
 .left
 {
-  width: 50%;
+  width: 60%;
   float: left;
 }
 
 .right
 {
-  width: 50%;
-  float: right;
+  width: 100%;
 }
 
 .section-skills
@@ -284,8 +301,6 @@ nav
 
 table
 {
-  width: 80%;
-  margin: auto;
   text-align: left;
   color: #bbbbbb;
 }
@@ -355,6 +370,8 @@ table
 {
   width: 60vw;
   background-color: #1a1a1d;
+  border: 1px solid #f0f0f5;
+
   box-shadow: inset 5px 5px 10px #0a0a0c,
   inset -5px -5px 10px #2a2a2e;
   height: 1rem;
@@ -365,9 +382,7 @@ table
 {
   height: 100%;
   width: 0%;
-  background-color: #1a1a1d;
-  box-shadow: 5px 5px 10px #0a0a0c,
-  -5px -5px 10px #2a2a2e;
+  background-color: #f0f0f5;
   position: relative;
   transition: all 1.5s;
 }
@@ -422,9 +437,8 @@ table
 .bg-text
 {
   font-family: 'Rubik Mono One', sans-serif;
-  margin: auto;
   padding: 0;
-  text-align: right;
+  text-align: center;
   font-size: 20vh;
   color: #e0e0e5;
   z-index: 0;
@@ -852,16 +866,6 @@ input:valid ~ .details, textarea:valid ~ .details {
 	}
 }
 
-
-.img-example
-{
-  position: absolute;
-  right: 5%;
-  width: 35vw;
-  transform: scale(2.1);
-  animation: float 10s ease-in-out infinite;
-}
-
 .hover { 
   position: relative;
   transition: all 1s ease;
@@ -966,7 +970,7 @@ input:valid ~ .details, textarea:valid ~ .details {
     font-size: 9vw;
   }
   
-  .img-example
+  .section-landing img
   {
     display: none;
   }
@@ -1000,6 +1004,26 @@ input:valid ~ .details, textarea:valid ~ .details {
   }
 
 }
+@media (min-width: 576px) {
+  .container
+  {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container
+  {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container
+  {
+    max-width: 960px;
+  }
+}
 
 @media (min-width: 1200px) {
   .container
@@ -1007,11 +1031,3 @@ input:valid ~ .details, textarea:valid ~ .details {
     max-width: 1140px;
   }
 }
-
-/* @media (min-width: 992px) {
-  .container
-  {
-      max-width: 960px;
-  }
-
-} */
