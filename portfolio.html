@@ -6,25 +6,27 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+
         <!--Navigation Bar-->
         <nav>
             <img id="logo" src="assets/favicon.png" alt="Logo">
-            <a href="#" class="toggle-button">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#cv">CV</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <button class="btn-primary"><a href="#">Contact Me</a></button>
+                </ul>
+            </div>
+            <a class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </a>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <button class="button-styled"><a href="contact.html">Contact Me</a></button>
-                </ul>
-            </div>
         </nav>
-        <div class="page-portfolio">
+
+        <section class="section-portfolio">
             <h2>Digital <span class="highlight hover">Rendering</span> Work</h2>
             <div class="image-grid">
                 <div class="image-box">
@@ -100,7 +102,7 @@
             <video width="640px" height="340" controls autoplay loop muted
                 src="./assets/rain.mp4" type="video/mp4">
             </video>
-        </div>
+        </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>

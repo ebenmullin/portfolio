@@ -29,8 +29,6 @@ masks.forEach(mask => {
     scrollTrigger: {trigger: mask, toggleActions: "restart none none reset"}
   });
 
-  tl.set(mask, {autoAlpha: 1});
-
   tl.from(mask, 1.5, {xPercent: -100, ease: Power2.out});
 
   tl.from(image, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
@@ -72,15 +70,6 @@ $(document).mousemove(function(event) {
  });
 });
 
-window.addEventListener('load',() =>{
-  let progressBars = document.querySelectorAll('.progress-bar');
-  let values = [
-      '60%',
-      '90%',
-      '70%',
-      '40%',
-  ];
-  progressBars.forEach((progress,index)=>{
-      progress.style.width = values[index];
-  })
-})
+window.setTimeout(function(){
+  $('.skill-progress').addClass("go");
+}, 1000);
