@@ -42,10 +42,10 @@ let tl = gsap.timeline({
   
 
 tl
-  .set("body", {overflow: "hidden"})
+  .set("html", {"overflow": "hidden"})
   .to(".intro", {opacity: 1, y: 0, duration: 1, stagger: .2})
   .to(".overlay", {height: 0, display: "none", duration: 1, ease: "power1.in"})
-  .set("body", {overflow: "auto"})
+  .set("html", {"overflow-y": "auto"})
   .to("nav", {opacity: 1, y: 0, duration: 0.5})
   // .from(".section-landing", {width: 100 + "%", height: 100 + "vh", "border-radius": 0, margin: 0})
   .to(".welcome", {opacity: 1, y: 0, duration: 1})
@@ -70,6 +70,24 @@ $(document).mousemove(function(event) {
  });
 });
 
-window.setTimeout(function(){
-  $('.skill-progress').addClass("go");
-}, 1000);
+
+var cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+});
