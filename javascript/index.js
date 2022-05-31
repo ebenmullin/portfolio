@@ -59,7 +59,7 @@ tl
 $(document).mousemove(function(event) {
   var xPos = (event.clientX / $(window).width())-0.5,
       yPos = (event.clientY/$(window).height())-0.5,
-      plane = $('.section-landing');
+      plane = $(".section-landing");
  
  TweenLite.to(plane, 0.5, {
    rotationY: 5 * xPos, 
