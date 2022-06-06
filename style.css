@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
@@ -308,6 +308,11 @@ nav
   text-align: center;
 }
 
+.section-cv li
+{
+  color: #bbbbbb;
+}
+
 .wrapper-grid
 {
   display: grid;
@@ -412,7 +417,7 @@ nav
 
 .img-container .info
 {
-  width: 35%;
+  width: 305%;
   float: right;
 }
 
