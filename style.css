@@ -60,7 +60,7 @@ nav
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0vh 10vw;
+  padding: 1vh 10vw;
   transition: all 500ms;
   z-index: 1;
 }
@@ -417,7 +417,7 @@ nav
 
 .img-container .info
 {
-  width: 305%;
+  width: 35%;
   float: right;
 }
 
@@ -429,6 +429,13 @@ nav
   transform-origin: left;
   object-fit: cover;
   display: block;
+}
+
+.mask iframe
+{
+  width: 100%;
+  border-radius: 1rem;
+  display: block;     
 }
 
 .img-container:nth-child(even) .mask
@@ -1115,7 +1122,7 @@ input:valid ~ .details, textarea:valid ~ .details
   
   nav
   {
-    padding: 5vh 10vw;
+    padding: 3vh 10vw;
   }
 
   #logo
@@ -1125,7 +1132,7 @@ input:valid ~ .details, textarea:valid ~ .details
 
   .wrapper-grid
   {
-    grid-template-columns: repeat(3, 40rem);
+    grid-template-columns: repeat(3, 35rem);
   }
 
   .container

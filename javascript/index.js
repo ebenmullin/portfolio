@@ -13,7 +13,7 @@ $(".toggle-button").click(function() {
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 
-  if(scroll >= 10) {
+  if(scroll >= 100) {
     $("nav").addClass("expanded");
 
   } else {
