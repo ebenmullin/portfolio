@@ -24,6 +24,7 @@ $(window).scroll(function() {
 
 masks.forEach(mask => {
   let image = mask.querySelector("img");
+  let iframe = mask.querySelector("iframe");
   
   let tl = gsap.timeline({
     scrollTrigger: {trigger: mask, toggleActions: "restart none none reset"}
@@ -32,6 +33,7 @@ masks.forEach(mask => {
   tl.from(mask, 1.5, {xPercent: -100, ease: Power2.out});
 
   tl.from(image, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
+  tl.from(iframe, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
 })
 
 let tl = gsap.timeline({
