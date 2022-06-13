@@ -13,7 +13,7 @@ $(".toggle-button").click(function() {
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 
-  if(scroll >= 100) {
+  if(scroll >= 10) {
     $("nav").addClass("expanded");
 
   } else {
@@ -93,3 +93,23 @@ $(document).mousemove(function(event) {
 // document.addEventListener('mouseup', function(){
 //   cursor.classList.remove('click')
 // });
+
+
+              // Plays video on scroll
+
+// const videoUrl = "https://www.youtube.com/embed/mwpSjEGBJV8?controls=0&loop=1&playlist=mwpSjEGBJV8";
+
+// const observer = new IntersectionObserver(elements => {
+//   if(elements[0].intersectionRatio > 0) {
+//     console.log("The element is in view!");
+//     $("#player").attr("src", videoUrl + "&autoplay=1");
+//   }else {
+//     console.log("The element is out of view")
+//     $("#player").attr("src", videoUrl);
+
+//   }
+// })
+
+// const iframe = $("iframe")[0];
+
+// observer.observe(iframe);
