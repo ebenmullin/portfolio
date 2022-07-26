@@ -98,28 +98,38 @@ nav
 
 .nav-links li a
 {
+  position: relative;
   text-decoration: none;
   color: #f0f0f5;
   margin: 5px 30px 5px 0;
-  display: block;
   -webkit-font-smoothing: antialiased;
-  border-bottom: 2px solid transparent;
   text-transform: uppercase;
-  letter-spacing: 2px;
   overflow: hidden;
   transition: 300ms;
   z-index: 1;
 }
 
-.nav-links li a:hover
+.nav-links li a::after
 {
-  transform: scale(1.2);
-  border-bottom: 2px solid #ff3f81;
+  content: "";
+  position: absolute;
+  background-color: #ff3f81;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: all ease 300ms;
 }
 
-.nav-links a.active
+
+.nav-links li a:hover::after
 {
-  border-bottom: 2px solid #ff3f81;
+  width: 100%;
+}
+
+.nav-links li a.active::after
+{
+  width: 100%;
 }
 
 .btn-primary
@@ -482,17 +492,15 @@ h2
 
 h3
 {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 2.5rem;
   color: #f0f0f5;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #ff3f81;
-  display: inline-flex;
+  margin-bottom: 1rem;
 }
 
 h4
 {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 2rem;
   color: #ff3f81;
 }
@@ -509,9 +517,14 @@ a, p, button
   color: #8a8a90;
 }
 
-.heading
+.dark
 {
   color: #1a1a1d;
+}
+
+.gray
+{
+  color: #4a4a4d;
 }
 
 .marquee
