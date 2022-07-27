@@ -113,3 +113,34 @@ $(document).mousemove(function(event) {
 // const iframe = $("iframe")[0];
 
 // observer.observe(iframe);
+
+$("#isometric").hover(function() {
+  $("#isometric").attr("src", "assets/isometric-2.png");
+
+}, function() {
+  $("#isometric").attr("src", "assets/isometric-1.png");
+});
+
+const modal = $(".modal");
+const previews = $(".image-box img");
+const original = $(".modal-img");
+const caption = $(".caption");
+
+previews.each(function(preview) {
+  $(this).on("click", () => {
+    modal.addClass("open");
+    original.addClass("open");
+
+    const imgDir = $(this).attr("data-original");
+    original.attr("src", "./assets/" + imgDir);
+    caption.text($(this).attr("alt")); 
+  });
+});
+
+modal.on("click", (e) => {
+  if($(e.target).hasClass("modal")) {
+    modal.removeClass("open");
+    original.removeClass("open");
+
+  }
+});

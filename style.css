@@ -118,7 +118,7 @@ nav
   width: 0;
   left: 0;
   bottom: -10px;
-  transition: all ease 300ms;
+  transition: all ease 500ms;
 }
 
 
@@ -135,7 +135,7 @@ nav
 .btn-primary
 {
   color: #ff3f81;
-  transition: .5s;
+  transition: 500ms;
   outline: none;
   width: 200px;
   height: 40px;
@@ -228,7 +228,7 @@ nav
   margin: 0 auto;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background-image: url("https://res2.weblium.site/res/5e820834f89f6c00234e1707/5e8483450ebff20021a3277e_optimized_1395_c1395x930-0x0.webp");
+  background-image: url("https://cdn.discordapp.com/attachments/981697635591290970/1001749851844915270/TouchPotato_liquid_paint_wallpaper_macos_inspired_ar_169_a6f547aa-6fd9-4e17-ae20-2c41c043b96c.png");
   /* background-image: url("https://i.redd.it/em566jx9ni651.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -367,13 +367,6 @@ nav
   margin: 1rem;
 }
 
-.card-footer
-{
-  margin-top: auto;
-  background-color: #f0f0f5;
-  padding: 1rem;
-}
-
 .section-portfolio
 {
   width: 100%;
@@ -402,6 +395,53 @@ nav
   padding: 80px 20px 0px;
   margin: 0 auto;
   transition: all 500ms ease;
+}
+
+.modal
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 100px;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  /* background-color: rgba(0,0,0,0.9); */
+  backdrop-filter: blur(10px);
+  transition: all 300ms ease;
+}
+
+.modal.open
+{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal .modal-img
+{
+  position: absolute;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 300ms ease;
+}
+
+.modal .modal-img.open
+{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal .caption
+{
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
 }
 
 .center
@@ -527,11 +567,6 @@ a, p, button
   color: #4a4a4d;
 }
 
-.marquee
-{
-  color: #cccccc;
-}
-
 .highlight
 {
   color: #2196f3;
@@ -601,7 +636,7 @@ a, p, button
   filter: opacity(0.5);
 }
 
-.image-grid .image-box h2
+.image-grid .image-box h3
 {
   width: 100%;
   margin: auto;
@@ -612,10 +647,11 @@ a, p, button
   transform: translate(0%, -50%);
   color: #f0f0f5;
   border-bottom: none;
+  pointer-events: none;
   transition: all 500ms ease;
 }
 
-.image-grid .image-box:hover h2
+.image-grid .image-box:hover h3
 {
   opacity: 1;
 }
@@ -1101,6 +1137,12 @@ input:valid ~ .details, textarea:valid ~ .details
   {
     max-width: 1140px;
   }
+
+  .expanded
+  {
+    padding: 1vh 10vw;
+  }
+  
 }
 
 @media (min-width: 1600px) {
