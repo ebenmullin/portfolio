@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap");
 
 *
 {
@@ -20,12 +20,12 @@ body
 
 h2, h3, h4
 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 h1, .highlight
 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .light
@@ -51,16 +51,17 @@ h1, .highlight
 
 nav
 {
-  transform: translateY(-120px);
-  opacity: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1vh 10vw;
+  /* transform: translateY(-120px);
+  opacity: 0; */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1vh 10vw;
+  min-height: 80px;
   transition: all 500ms;
   z-index: 1;
 }
@@ -78,9 +79,8 @@ nav
 
 .expanded
 {
-  padding: 1vh 1vw;
-  box-shadow: 0 2px 10px #000000;
-  background-color: #1a1a1d;
+  background-color: #1a1a1df0;
+  box-shadow: 0 5px 10px 0px #1a1a1df0;
 }
 
 .expanded #logo
@@ -91,9 +91,12 @@ nav
 
 .nav-links ul
 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .nav-links li a
@@ -101,7 +104,6 @@ nav
   position: relative;
   text-decoration: none;
   color: #f0f0f5;
-  margin: 5px 30px 5px 0;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   overflow: hidden;
@@ -137,10 +139,10 @@ nav
   color: #ff3f81;
   transition: 500ms;
   outline: none;
-  width: 200px;
+  width: 180px;
   height: 40px;
   background: -webkit-linear-gradient(0deg, transparent 50%, #ff3f81 50%);
-  background-size: 400px;
+  background-size: 360px;
   border: 2px solid #ff3f81;
   border-radius: 10px;
   text-transform: uppercase;
@@ -148,26 +150,24 @@ nav
 
 .btn-primary:hover
 {
-  background-position: 200px 0;
+  background-position: 180px 0;
   cursor: pointer;
   border-radius: 25px;
 }
 
-.toggle-button
+.hamburger
 {
-  position: relative;
-  float: right;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
+  cursor: pointer;
 }
 
-.toggle-button .bar
+.hamburger .bar
 {
+  transition: all 300ms ease;
+  display: block;
+  width: 25px;
   height: 3px;
-  width: 100%;
+  margin: 5px auto;
   background-color: #f0f0f5;
   border-radius: 3px;
 }
@@ -228,11 +228,10 @@ nav
   margin: 0 auto;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background-image: url("https://cdn.discordapp.com/attachments/981697635591290970/1001749851844915270/TouchPotato_liquid_paint_wallpaper_macos_inspired_ar_169_a6f547aa-6fd9-4e17-ae20-2c41c043b96c.png");
+  background-image: url("assets/Colorfull-Clouds.png");
   /* background-image: url("https://i.redd.it/em566jx9ni651.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -360px;
 }
 
 .section-about
@@ -444,6 +443,72 @@ nav
   transform: translate(-50%, -5%);
 }
 
+.section-contact
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2a30
+}
+
+.contact-container
+{
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  border-radius: 1rem;
+  background-color: #2a2a30;
+  box-shadow: 3px 3px 6px #111113,
+  -3px -3px 6px #43434d;
+  overflow: hidden;
+}
+
+.contact-form
+{
+  width: 60%;
+  padding: 1.5rem;
+}
+
+.contact-form .single-row
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form .input-box
+{
+  margin: 1.5rem 0;
+}
+
+.contact-form button
+{
+  width: 100%;
+  height: 3rem;
+  background-color: #ff3f81;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 6px #111113,
+  -3px -3px 6px #43434d;
+}
+
+.contact-form h4,
+.contact-details h4
+{
+  font-family: "Montserrat", sans-serif;
+  color: #bbbbbb;
+  margin-bottom: 2rem;
+}
+
+.contact-details
+{
+  padding: 1.5rem;
+  width: 40%;
+  background-image: linear-gradient(-15deg, #ff3f81 0%, #2a2a30 75%);
+}
+
 .center
 {
   margin: auto;
@@ -578,12 +643,6 @@ a, p, button
   transform: translateY(5vh);
 }
 
-.welcome
-{
-  opacity: 0;
-  transform: translateY(20vh);
-}
-
 .btn-primary a
 {
   color: #ff3f81;
@@ -594,6 +653,28 @@ a, p, button
 .btn-primary:hover a
 {
   color: #f0f0f5;
+}
+
+.btn-back
+{
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  border: none;
+  background-color: #2a2a30;
+  box-shadow: 3px 3px 6px #111113,
+  -3px -3px 6px #43434d;
+  font-size: 3rem;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.btn-back:active
+{
+  box-shadow: inset 3px 3px 6px #111113,
+  inset -3px -3px 6px #43434d;
+  font-size: 2.8rem;
 }
 
 .image-grid
@@ -656,7 +737,6 @@ a, p, button
   opacity: 1;
 }
 
-/* Let's make it responsive */
 @media (max-width: 768px) {
   .image-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -832,7 +912,7 @@ textarea
   outline: none;
   resize: none;
   font-size: 1.2rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 1rem;
   box-shadow: inset 3px 3px 6px #111113,
   inset -3px -3px 6px #43434d;
@@ -975,46 +1055,35 @@ input:valid ~ .details, textarea:valid ~ .details
   }
 }
 
-
 @media (max-width: 900px) {
-  .toggle-button
+  .hamburger
   {
-    display: flex;
-  }
-  
-  .nav-links
-  {
-    display: none;
-    width: 100%;
-    background-color: #2a2a30;
+    display: block;
   }
   
   .nav-links ul
   {
-    width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    gap: 0;
     flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 10px 0px #1a1a1df0;
+    background-color: #1a1a1df0;
+    width: 100%;
+    transition: all 300ms ease;
+    clip-path: circle(0% at 100% 0%);
   }
   
   .nav-links li
   {
-    text-align: center;
+    margin: 0.5rem 0;
   }
-  
-  .nav-links a.active
+
+  .nav-links button
   {
-    border-bottom: 2px solid transparent;
-    color: #ff3f81;
-  }
-  
-  .nav-links li a:hover
-  {
-    border-bottom: transparent;
-    color: #ff3f81;
-  }
-  
-  .nav-links.active
-  {
-    display: flex;
+    margin: 0.5rem 0;
   }
 
   .aligner-flex
