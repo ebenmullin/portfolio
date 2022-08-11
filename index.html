@@ -26,23 +26,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     </head>
     <body>
-
-        <!-- <div class="overlay">
-            <h1 class="intro">Loading</h1>
-        </div>  -->
- 
         <!-- <div class="cursor"><span class="fa-solid fa-circle-info"></span></div> -->
 
         <!--Navigation Bar-->
         <nav>
-            <img id="logo" src="assets/favicon.png" alt="logo">
+            <img id="logo" src="assets/favicon3.png" alt="logo">
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html#home" class="active">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <button class="btn-primary"><a href="contact.html">Contact Me</a></button>
+                    <button class="btn btn-secondary"><a href="contact.html">Contact Me</a></button>
                 </ul>
             </div>
             <a class="hamburger">
@@ -53,16 +48,26 @@
         </nav>
         
         <section class="section-landing" id="home">
-            <div class="aligner">
-                <h1>Welcome to my digital <span class="highlight hover">Portfolio</span></h1>
+            <div data-speed="1.2" class="hero">
             </div>
-            <img src="assets/favicon.png" alt="floating-image">
+            <div class="text-container">
+                <h1>My Portfolio</h1>
+                <h1 data-speed="0.96">My Portfolio </h1>
+                <h1 data-speed="0.92">My Portfolio </h1>
+                <h1 data-speed="0.88">My Portfolio </h1>
+                <h1 data-speed="0.84">My Portfolio </h1>
+                <h1 data-speed="0.80">My Portfolio </h1>
+                <p>Welcome to my digital Portfolio! I coded this website so I can show off my hobbies and skills</p>
+                <p>Click the button bellow to go straight to my portfolio or scroll down and check out my website</p>
+                <br>
+                <button class="btn btn-secondary"><a href="portfolio.html">Visit Page</a></button>
+            </div>
+            <div class="rotate">
+                <img src="https://monopo.vn/_nuxt/7992268be1d357733b95bc339eefdb8e.svg" alt="">
+            </div>
         </section>
         
         <!-- <h1 class="marquee">Student | website and app developer | 3d modelling and animation | video editing | electronics</h1> -->
-        <section class="section-banner">
-            <div class="banner"></div>
-        </section>
         
         <section class="section-about light" id="about">
             <div class="aligner">
@@ -303,7 +308,7 @@
                 <div class="center">
                     <hr>
                     <p>Click on the button bellow to check out more projects</p>
-                    <button class="btn-primary"><a href="portfolio.html">Portfolio</a></button>
+                    <button class="btn"><a href="portfolio.html">Portfolio</a></button>
                 </div>
             </div>
         </section>
@@ -389,6 +394,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
         <script src="javascript/index.js"></script>
     </body>
 </html> 
