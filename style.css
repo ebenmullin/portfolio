@@ -53,8 +53,7 @@ nav
   justify-content: space-between;
   align-items: center;
   padding: 1rem 6rem;
-  /* background-color: #1a1a1d50;
-  backdrop-filter: blur(10px); */
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,6 +61,29 @@ nav
   min-height: 80px;
   transition: all 500ms;
   z-index: 1;
+}
+
+.expanded
+{
+  backdrop-filter: blur(10px);
+}
+
+.expanded .nav-links li a,
+.expanded .btn a
+{
+  color: #1a1a1d;
+}
+
+.expanded .btn
+{
+  border: 2px solid #1a1a1d;
+  background: -webkit-linear-gradient(0deg, transparent 50%, #1a1a1d 50%);
+  background-size: 360px;
+}
+
+.expanded .nav-links li a::after
+{
+  background-color: #1a1a1d;
 }
 
 #logo
@@ -101,7 +123,7 @@ nav
 {
   content: "";
   position: absolute;
-  background-color: #5d81a2;
+  background-color: #b3b4af;
   height: 3px;
   width: 0;
   left: 0;
@@ -122,13 +144,12 @@ nav
 
 .btn
 {
-  color: #ff3f81;
   cursor: pointer;
   outline: none;
   width: 180px;
   height: 40px;
-  background: -webkit-linear-gradient(0deg, transparent 50%, #ff3f81 50%);
-  border: 2px solid #ff3f81;
+  background: -webkit-linear-gradient(0deg, transparent 50%, #b3b4af 50%);
+  border: 2px solid #b3b4af;
   text-transform: uppercase;
   transition: 500ms;
   background-size: 360px;
@@ -143,7 +164,7 @@ nav
 
 .btn a
 {
-  color: #ff3f81;
+  color: #b3b4af;
   text-decoration: none;
   transition: all 300ms ease;
 }
@@ -183,10 +204,31 @@ nav
   border-radius: 3px;
 }
 
+/* .overlay
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0;
+  z-index: 3;
+  background-color: #5d81a2;
+}
+
+.overlay:nth-child(2)
+{
+  top: 33%;
+}
+
+.overlay:nth-child(3)
+{
+  top: 66%;
+} */
+
 .section-landing
 {
   position: relative;
-  background-image: linear-gradient(90deg, #b3b4af 40%, #1a1a1d 40%);
+  background-image: linear-gradient(90deg, #b3b4af 35%, #1a1a1d 35%);
   display: flex;
   height: 100vh;
   align-items: center;
@@ -194,15 +236,20 @@ nav
 
 .section-landing .hero
 {
+  overflow: hidden;
   position: relative;
-  margin: 0 0 0 15%;
-  border-radius: 1rem;;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
-  width: 0%;
-  height: 50%;
-  background-image: url("assets/minimalist-lake.png");
-  background-size: cover;
-  background-position: bottom;
+  border-radius: 1rem;
+  margin: 0 0 0 10%;
+  width: 50%;
+}
+
+.section-landing .hero img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .text-container
@@ -1102,10 +1149,38 @@ input:valid ~ .details, textarea:valid ~ .details
     font-size: 9vw;
   }
 
-  .section-landing .aligner
+  .section-landing
   {
-    width: 100%;
-    margin-left: 0;
+    background-image: linear-gradient(90deg, #b3b4af 50%, #1a1a1d 50%);
+  }
+
+  .section-landing .hero
+  {
+    margin: -20% auto;
+    top: -100px;
+    width: 60%;
+  }
+
+  .text-container
+  {
+    bottom: 10%;
+    width: 90%;
+    text-align: center;
+    margin: auto;;
+  }
+
+  .text-container p
+  {
+    display: none;
+  }
+
+  .text-container h1
+  {
+    font-size: 3.5rem;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+    bottom: 120%;
   }
 
   .img-container .mask
