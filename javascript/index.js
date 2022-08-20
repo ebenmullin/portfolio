@@ -72,10 +72,10 @@ $(document).mousemove(function(event) {
       plane = $(".hero");
  
  TweenLite.to(plane, 0.5, {
-   rotationY: 100 * xPos, 
-   rotationX: -100 * yPos,
-   x: -200 * xPos,
-   y: -200 * yPos,
+   rotationY: 20 * xPos, 
+   rotationX: -20 * yPos,
+  //  x: -200 * xPos,
+  //  y: -200 * yPos,
    ease: "Power4.inOut",
    transformPerspective: 1000,
    transformOrigin: "center"
@@ -132,3 +132,10 @@ const observer = new IntersectionObserver(() => {
 });
 
 observer.observe(target);
+
+$(".text-container .btn").hover(function() {
+  $(".hero img").attr("src", "assets/isometric-1.png");
+
+}, function() {
+  $(".hero img").attr("src", "assets/rose-minimal.png");
+});
