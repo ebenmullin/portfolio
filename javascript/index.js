@@ -6,7 +6,7 @@ $(".nav-link ul li").click(function() {
   console.log("working")
 });
 
-// let navExpanded = gsap.timeline({paused: true});
+let navExpanded = gsap.timeline({paused: true});
 
 // navExpanded
 //   .to($(".hamburger .bar:nth-child(1)"), 0.3, {y: 8, rotation: 45}, "start")
@@ -18,53 +18,44 @@ $(".nav-link ul li").click(function() {
 
 // tried to turn standard js code into jQuery code
 
-let Jmasks = $(".mask");
+let masks = document.querySelectorAll(".mask");
 
-Jmasks.each(Jmask => {
-  let Jimage = $(Jmask).find("img")
-  console.log(Jimage + "this is cool");
-  let Jiframe = $(Jmask).find("iframe")
+masks.forEach(mask => {
+  let image = mask.querySelector("img");
+  console.log(image + "testing testing");
+  let iframe = mask.querySelector("iframe");
   
   let tl = gsap.timeline({
-    scrollTrigger: {trigger: Jmask, toggleActions: "restart none none reset"}
+    scrollTrigger: {trigger: mask, toggleActions: "restart none none reset"}
   });
-  
+
   tl
-  .from(Jmask, 1.5, {xPercent: -100, ease: Power2.out})
-  .from(Jimage, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
-  .from(Jiframe, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
-})
+    .from(mask, 1.5, {xPercent: -100, ease: Power2.out})
+    .from(image, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
+    .from(iframe, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
+});
 
-// let masks = document.querySelectorAll(".mask");
+let counter = {
+  value: 0
+}
 
-// masks.forEach(mask => {
-//   let image = mask.querySelector("img");
-//   console.log(image + "testing testing");
-//   let iframe = mask.querySelector("iframe");
-  
-//   let tl = gsap.timeline({
-//     scrollTrigger: {trigger: mask, toggleActions: "restart none none reset"}
-//   });
-
-//   tl
-//     .from(mask, 1.5, {xPercent: -100, ease: Power2.out})
-//     .from(image, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
-//     .from(iframe, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
-// });
-
-
+// let percent = $(".percent");
+let precent = document.getElementById("percent")
 
 let tl = gsap.timeline({
-  defaults: {ease: "power2.easeInOut", duration: 2}
+  defaults: {ease: "power2.out", duration: 2}
 });
 
 tl
-  .from($(".section-landing"), 1, {"background-image": "linear-gradient(90deg, #b3b4af 0%, #1a1a1d 0%)"}, "start")
-  .to($("nav"), 2, {opacity: 1}, "start")
-  .from($(".hero"), 2, {xPercent: -130}, "start")
-  .from($(".hero img"), 2, {xPercent: 130}, "start")
-  .from($(".text-container"), 1, {opacity: 0, yPercent: 20}, "=-1")
-// Homepage reactive Mouse
+  .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value)})
+  .to(".preloader", 1, {opacity: 0})
+  .from(".bg-left", 1, {ease: "power4.inOut", width: 0})
+  .from("nav", 1, {opacity: 0}, "=-1")
+  .from(".hero", 2, {xPercent: -130}, "=-0.5")
+  .from(".hero img", 2, {xPercent: 130}, "=-2")
+  .from(".text-container", 1, {opacity: 0, yPercent: 20}, "=-1")
+  .from(".rotate", 1, {opacity: 0}, "=-1")
+  .set(".hero", {"box-shadow": "0 0 50px rgba(0, 0, 0, 0.9)"});
 
 $(document).mousemove(function(event) {
   var xPos = (event.clientX / $(window).width())-0.5,
@@ -124,18 +115,23 @@ gsap.to("[data-speed]", {
   scrollTrigger: {start: 0, end: "max", invalidateOnRefresh: true, scrub: 0}
 });
 
+// const config = {
+//   rootMargin: "0px",
+//   threshold: 0.05
+// };
 
-const target = document.querySelector(".section-landing");
+// const observer = new IntersectionObserver(function (entries, self) {
+//   entries.forEach(entry => {
+//     if(entry.isIntersecting) {
+//       $("nav").addClass("nav-dark")
+//     } else {
+//       $("nav").removeClass("nav-dark")
+//     }
+//   });
+// }, config);
 
-const observer = new IntersectionObserver(() => {
-    $("nav").toggleClass("expanded")
-});
+// const entry = document.querySelectorAll(".dark");
 
-observer.observe(target);
-
-$(".text-container .btn").hover(function() {
-  $(".hero img").attr("src", "assets/isometric-1.png");
-
-}, function() {
-  $(".hero img").attr("src", "assets/rose-minimal.png");
-});
+// entry.forEach(section => {
+//   observer.observe(section);
+// });
