@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
 
 @font-face {
   font-family: "Mosk";
@@ -981,16 +982,21 @@ input:valid ~ .details, textarea:valid ~ .details
     text-align: center;
   }
 
+  .bg-left
+  {
+    width: 50%;
+  }
+
   .bg-left .hero
   {
-    margin: -20% auto;
-    top: -100px;
-    width: 60%;
+    margin: auto 30%;
+    width: 140%;
+    bottom: 10%;
   }
 
   .text-container
   {
-    bottom: 10%;
+    bottom: 20%;
     width: 90%;
     text-align: center;
     margin: auto;;
@@ -1126,6 +1132,7 @@ input:valid ~ .details, textarea:valid ~ .details
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
   width: 100%;
   height: 100vh;
   z-index: 50;
@@ -1138,6 +1145,7 @@ input:valid ~ .details, textarea:valid ~ .details
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Source Serif Pro', serif;
   height: 100vh;
   width: 100%;
   color: white;

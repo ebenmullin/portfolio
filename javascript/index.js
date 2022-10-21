@@ -47,8 +47,9 @@ let tl = gsap.timeline({
 });
 
 tl
-  .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value)})
-  .to(".preloader", 1, {opacity: 0})
+  .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
+  .to(".percent", 1, {opacity: 0})
+  .to(".preloader", 1, {width: 0}, "-=0.5")
   .from(".bg-left", 1, {ease: "power4.inOut", width: 0})
   .from("nav", 1, {opacity: 0}, "=-1")
   .from(".hero", 2, {xPercent: -130}, "=-0.5")
