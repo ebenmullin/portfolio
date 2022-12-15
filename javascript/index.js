@@ -47,7 +47,7 @@ let tl = gsap.timeline({
 });
 
 tl
-  .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
+  .to(counter, 1, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
   .to(".percent", 1, {opacity: 0})
   .to(".preloader", 1, {width: 0}, "-=0.5")
   .from(".bg-left", 1, {ease: "power4.inOut", width: 0})
@@ -57,6 +57,7 @@ tl
   .from(".text-container", 1, {opacity: 0, yPercent: 20}, "=-1")
   .from(".rotate", 1, {opacity: 0}, "=-1")
   .set(".hero", {"box-shadow": "0 0 50px rgba(0, 0, 0, 0.9)"});
+  // .from("body", 2, {"background-image": "radial-gradient(at 50% 50%, transparent 0%, transparent 100%)"});
 
 $(document).mousemove(function(event) {
   var xPos = (event.clientX / $(window).width())-0.5,
@@ -73,16 +74,6 @@ $(document).mousemove(function(event) {
    transformOrigin: "center"
  });
 });
-
-// Changes Isometric Image on hover
-
-$("#isometric").hover(function() {
-  $("#isometric").attr("src", "assets/isometric-2.png");
-
-}, function() {
-  $("#isometric").attr("src", "assets/isometric-1.png");
-});
-
 
 // Modal for portfolio
 

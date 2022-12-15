@@ -13,14 +13,14 @@
         <meta property="og:url" content="https://metatags.io/">
         <meta property="og:title" content="Eben Mullin | My Portfolio">
         <meta property="og:description" content="Digital Portfolio Website For Eben Mullin">
-        <meta property="og:image" content="https://cdn.discordapp.com/attachments/809546536664563772/971677574939959296/logo7.png">
+        <meta property="og:image" content="https://cdn.discordapp.com/attachments/809546536664563772/971677574939959296/favicon.png">
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://metatags.io/">
         <meta property="twitter:title" content="Eben Mullin | My Portfolio">
         <meta property="twitter:description" content="Digital Portfolio Website For Eben Mullin">
-        <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/809546536664563772/971677574939959296/logo7.png">
+        <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/809546536664563772/971677574939959296/favicon.png">
         <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -33,7 +33,7 @@
         <!--Navigation Bar-->
         <nav class="nav-dark">
             <div class="container">
-                <img id="logo" src="assets/logo3.png" alt="logo">
+                <img id="logo" src="assets/logo5.png" height="60px" alt="logo">
                 <div class="nav-links">
                     <ul>
                         <li><a href="#home" class="active">Home</a></li>
@@ -50,39 +50,41 @@
                 </a>
             </div>
         </nav>
-        
-        <section class="section-landing dark" id="home">
-            <div class="bg-left">
-                <div class="hero">
-                    <img src="assets/isometric-1.png" alt="">
-                </div>
-            </div>
 
-            <div class="text-container">
-                <h1>My Portfolio</h1>
-                <h1 data-speed="0.96">My Portfolio </h1>
-                <h1 data-speed="0.92">My Portfolio </h1>
-                <h1 data-speed="0.88">My Portfolio </h1>
-                <h1 data-speed="0.84">My Portfolio </h1>
-                <h1 data-speed="0.80">My Portfolio </h1>
-                <p class="paragraph">Welcome to my digital Portfolio! I coded this website so I can show off my hobbies and skills</p>
-                <p class="paragraph">Click the button bellow to go straight to my portfolio or scroll down and check out my website</p>
-                <br>
-                <button class="btn btn-secondary"><a href="portfolio.html">Visit Page</a></button>
-            </div>
-            <div class="rotate">
-                <img src="assets/rotate.png" width="100%" alt="scroll down">
-            </div>
-            <!-- <div class="rotate">
-                <img src="assets/rotate2.png" width="130%" alt="scroll down">
-            </div> -->
-        </section>
+        <div class="background">
+            <section class="section-landing dark" id="home">
+                <div class="bg-left">
+                    <div class="hero">
+                        <img src="assets/isometric-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="text-container">
+                    <h1>My Portfolio</h1>
+                    <h1 data-speed="0.96">My Portfolio </h1>
+                    <h1 data-speed="0.92">My Portfolio </h1>
+                    <h1 data-speed="0.88">My Portfolio</h1>
+                    <h1 data-speed="0.84">My Portfolio </h1>
+                    <h1 data-speed="0.80">My Portfolio </h1>
+                    <p class="paragraph">Welcome to my digital Portfolio! I coded this website so I can show off my hobbies and skills</p>
+                    <p class="paragraph">Click the button bellow to go straight to my portfolio or scroll down and check out my website</p>
+                    <br>
+                    <button class="btn btn-secondary"><a href="portfolio.html">Visit Page</a></button>
+                </div>
+                <div class="rotate">
+                    <img src="assets/rotate.png" width="100%" alt="scroll down">
+                </div>
+                <!-- <div class="rotate">
+                    <img src="assets/rotate2.png" width="130%" alt="scroll down">
+                </div> -->
+            </section>
+        </div>
         
         <!-- <h1 class="marquee">Student | website and app developer | 3d modeling and animation | video editing | electronics</h1> -->
         
         <section class="section-about light" id="about">
             <div class="container">
-                <img src="assets/logo1.png" height="256" alt="profile">
+                <img src="assets/logo.png" height="256" alt="profile">
                 <hr>
                 <div class="aligner-flex">
                     <div class="left">
@@ -114,6 +116,7 @@
                             <h4>Awards</h4>
                             <ul>
                                 <li>2x Spotswood College Electronics Awards</li>
+                                <li>1x Evolocity Excellence in engineering Go Kart</li>
                             </ul>
                         </div>
                         <div class="text-col">
@@ -137,26 +140,34 @@
 
                 <div class="wrapper-grid">
                     <div class="card">
-                        <img src="assets/code.jpg" alt="code">
-                        <h3>Coding</h3>
-                        <p>I think I'm pretty good at coding. I've got about 2 years of experience with HTML and CSS and 2 months of javascript but I'm picking it up quite fast</p>
+                        <div class="img-card">
+                            <img src="assets/code.png" alt="code">
+                            <h3>Coding</h3>
+                        </div>
+                        <p>I have over 3 years of experience with HTML, CSS and JavaScript. Another year of experience with external js libraries like GSAP and jquery</p>
                     </div>
                     
                     <div class="card">
-                        <img src="assets/isometric-1.png" alt="modeling">
-                        <h3>3D Modeling</h3>
-                        <p>I would say that I'm quite experienced in 3D applications and enjoy modeling things in my free time. For example the logo for my website was made in Blender</p>
+                        <div class="img-card">
+                            <img src="assets/isometric-1.png" alt="modeling">
+                            <h3>Modeling</h3>
+                        </div>
+                        <p>I'm quite experienced in 3D applications and enjoy modeling things in my free time, the logo for my website was modeled in Blender</p>
                     </div>
                     
                     <div class="card">
-                        <img src="assets/fpv.png" alt="electronics">
-                        <h3>FPV / Electronics</h3>
+                        <div class="img-card">
+                            <img src="assets/fpv.jpeg" alt="electronics">
+                            <h3>FPV / Electronics</h3>
+                        </div>
                         <p>Ive got quite a lot of experience with electronics. I've built my own drone which involved a lot of Soldering and I've helped make a go kart which required a lot of electronic knowledge.</p>
                     </div>
                     
                     <div class="card">
-                        <img src="https://www.cined.com/content/uploads/2020/06/Resolve-16_featured.jpg" alt="editing">
-                        <h3>Media Production</h3>
+                        <div class="img-card">
+                            <img src="https://images.ctfassets.net/3s5io6mnxfqz/2A45aWQEz4TZ1M7aY9za0t/146bcc86770a636acfb51ef3ac94f868/AdobeStock_346156119.jpeg" alt="editing">
+                            <h3>Editing</h3>
+                        </div>
                         <p>I enjoy video editing in Davinci Resolve. I'm quite experienced in it and have been using it for about 2 years.</p>
                     </div>
                 </div>
@@ -172,15 +183,15 @@
                     <p><b>Discord:</b> TouchPotato#9521</p>
                     <br>
                     <p>
-                        I'm a Front-end web developer with two years of experience in cross-browser responsive designs,
+                        I'm a Full Stack web developer with two years of experience in Design, User Experience and back-end development
                         I'm very experienced with CSS and HTML and I have coded several websites for personal projects and friends.
-                        I'm great at JavaScript frameworks like node.js and jquery.
+                        I've learnt most of my skills from a full stack web dev course online.
                     </p>
                     <hr>
 
                 <h4>Skills</h4>
-                    <p><b>Languages:</b> HTML, CSS, JavaScript, PHP, Java, Json</p>
-                    <p><b>Tools:</b> Git, VSCode, Blender, Gimp, Davinci Resolve, ReelSteady Go</p>
+                    <p><b>Languages:</b> HTML, CSS, JavaScript, Java, Python, Json</p>
+                    <p><b>Tools:</b> Git, VSCode, Figma, Blender, Gimp, Davinci Resolve, ReelSteady Go</p>
                     <hr>
 
                 <h4>Experience</h4>
@@ -188,7 +199,9 @@
                     <li>July 2018 - Sept 2019</li>
                     <br>
                     <p>
-                        Back in 2018 I made my own FPV Drone, It was a fun school project and over the years I have been getting very skilled at flying it
+                        Back in 2018 I made my own FPV Drone, It took about 3 months to save up for all the parts and build it.
+                        I bought a GoPro and 3d printed a mount for it on top of my drone.
+                        I recently rebuilt my drone with brand new hardware. I switched from 4s to 6s batteries to improve performance and switches to ExpressLRS for improved range.
                     </p>
                     <br>
 
@@ -196,15 +209,22 @@
                     <li>Jan 2022 - Still in progress</li>
                     <br>
                     <p>
-                        I Created my own website so I could show my set of skills and projects to future employers
+                        I created my own website so I could show my set of skills and projects to future employers.
+                        It has been a really fun project and I still keep it up to date and make changes.
+                        <!-- Im working on converting it into a node app so I can host it myself -->
                     </p>
                     <br>
 
-                    <p><b>Minecraft Client</b></p>
-                    <li>Jun 2020 - Dec 2021</li>
+                    <p><b>Minecraft Development</b></p>
+                    <li>May 2020 - Dec 2021</li>
                     <br>
                     <p>
-                        I decompiled and coded a minecraft client. this was a really fun project and great introduction into Java
+                        I was inspired by other people who coded mods for Minecraft, so I decided I would code my own.
+                        The first mod I coded added new custom tools, armour and materials to the game, Special Ore could be found deep underground and you could use it to make really strong weapons and armour.
+                        I uploaded this to a mod sharing site in july 2020 and it now has ~2000 downloads.
+                        After developing a few more mods I went on to code a custom client for the game.
+                        My client named, "Luminac" Features a new modern GUI's and comes packaged with a bunch of useful mods.
+                        Its a utility mod aimed to automate mundane tasks and improve the user experience of the game.
                     </p>
                     <br>
 
@@ -212,7 +232,9 @@
                     <li>August 2022 - Still in progress</li>
                     <br>
                     <p>
-                        I wanted to learn python because its a great language to use and after learning the basics I made a 2d game using the pygame library
+                        I wanted to learn python because its a great language and highly versatile.
+                        I thought that a fun way to learn python would be to code a 2d platform game,
+                        with help from 2d game library "pygame" I was able to create a simple platformer.
                     </p>
                     <hr>
 
@@ -221,21 +243,19 @@
                     <li>2018 - Now</li>
                     <br>
                     <p>
-                        Doing learner me Course which teaches full stack web development (front end and back end).
-                        I'm learning a lot of info in this class like how to use node.js, express, and databases
+                        I am currently doing a course which teaches me full stack development.
+                        Ive learnt how to use a lot of new software and I learnt a lot of new techniques.
+                        Some of these include using NPM, Node.js, express, MongoDB and other databases.
+                        Im also learning how to use javascript frameworks like svelte and react.
                     </p>
                     <br>
-
-                    <p><b>University</b></p>
-                    <li>0 - 0</li>
-                    <br>
-                    <p>
-                        so I haven't done uni so yea... I want to do computer science though
-                    </p>
             </div>
         </section>
         
-        <section class="section-parallax light"></section>
+        <section class="section-parallax light">
+            <h3> </h3>
+            <h1> BIG TEXT👍🏿😂</h1>
+        </section>
         
         <section class="section-portfolio dark">
             <div class="container">
@@ -270,15 +290,15 @@
                     </div>
                 </div>
 
-                <div class="img-container">
+                <div class="img-container" data-color="violet">
                     <div class="mask">
                         <img src="assets/Luminac.png" alt="client">
                     </div>
                     <div class="info">
                         <div class="text-col">
                             <h3>Minecraft Client</h3>
-                            <p class="paragraph">Back in 2019 I decided I wanted to code my own minecraft client.
-                                I learned Java and decompiled minecraft and after 2 years this was the result</p>
+                            <p class="paragraph">
+                                I coded my own Minecraft client as a fun project to learn java, I added custom GUI's, and made it so you can automate mundane tasks.</p>
                         </div>
                     </div>
                 </div>
@@ -290,16 +310,7 @@
                     <div class="info">
                         <div class="text-col">
                             <h3>Full Stack Dev</h3>
-                            <p class="paragraph">Portfolio Portfolio Portfolio Portfolio Portf</p>
-                            <p class="paragraph">o Portfolio Portfolio Portfolio Portfolio Por</p>
-                            <p class="paragraph">lio Portfolio Portfolio Portfolio Portfolio P</p>
-                            <p class="paragraph">folio Portfolio Portfolio Portfolio Portfolio</p>
-                            <p class="paragraph">rtfolio Portfolio Portfolio Portfolio Portfol</p>
-                            <p class="paragraph">Portfolio Portfolio Portfolio Portfolio Portf</p>
-                            <p class="paragraph">o Portfolio Portfolio Portfolio Portfolio Por</p>
-                            <p class="paragraph">lio Portfolio Portfolio Portfolio Portfolio P</p>
-                            <p class="paragraph">folio Portfolio Portfolio Portfolio Portfolio</p>
-                            <p class="paragraph">rtfolio Portfolio Portfolio Portfolio Portfol</p>
+                            <p class="paragraph">Ill fill this out later</p>
                         </div>
                     </div>
                 </div>
