@@ -33,7 +33,6 @@ body
   radial-gradient(at 10% 20%, #e067ac 0%, transparent 50%),
   radial-gradient(at 70% 25%, #ff70d4 0%, transparent 50%),
   radial-gradient(at 90% 80%, #ff70d4 0%, transparent 100%);
-  background-color:#1a1a1d;
   background-attachment: fixed;
   font-size: 1rem;
 }
@@ -355,15 +354,6 @@ nav .container
   margin-bottom: 2rem;
 }
 
-.section-skills
-{
-  width: 100%;
-  height: 100%;
-  padding: 5vh 0;
-  background-color: var(--light);
-  text-align: center;
-}
-
 .section-parallax
 {
   display: flex;
@@ -388,12 +378,24 @@ nav .container
   font-family: "Mosk";
 }
 
-.section-cv
+section
 {
-  scroll-margin-top: 25vh;
   width: 100%;
   height: 100%;
   padding: 5vh 0;
+  background-color: var(--light);
+  text-align: center;
+}
+
+.section-skills
+{
+  background-color: var(--light);
+  text-align: center;
+}
+
+.section-cv
+{
+  scroll-margin-top: 25vh;
 }
 
 .section-cv .container
@@ -862,13 +864,17 @@ input:valid ~ .details, textarea:valid ~ .details
 
 ::-webkit-scrollbar
 {
-  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb
 {
   background: #6a6a70;
   border-radius: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+  background: none;
 }
 
 ::-webkit-scrollbar-thumb:hover
