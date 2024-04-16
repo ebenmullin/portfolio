@@ -1,20 +1,45 @@
-$(".hamburger").click(function() {
-  navExpanded.reversed() ? navExpanded.play() : navExpanded.reverse();
+$(document).ready(function() {
+  // Check screen width on page load
+  checkScreenWidth();
+
+  // Check screen width on window resize
+  $(window).resize(checkScreenWidth);
 });
 
-$(".nav-link ul li").click(function() {
-  console.log("working")
-});
+function checkScreenWidth() {
+  if (window.innerWidth <= 768) {
+    // Mobile or tablet screen width
+    enableMobileCode();
+  } else {
+    // Desktop screen width
+    disableMobileCode();
+  }
+}
 
-let navExpanded = gsap.timeline({paused: true});
+function enableMobileCode() {
+  $(".hamburger").click(function() {
+    navExpanded.reversed() ? navExpanded.play() : navExpanded.reverse();
+  });
 
-// navExpanded
-//   .to($(".hamburger .bar:nth-child(1)"), 0.3, {y: 8, rotation: 45}, "start")
-//   .to($(".hamburger .bar:nth-child(2)"), 0.3, {opacity: 0}, "start")
-//   .to($(".hamburger .bar:nth-child(3)"), 0.3, {y: -8, rotation: -45}, "start")
+  let navExpanded = gsap.timeline({paused: true});
 
-//   .to($(".nav-links ul"), {duration: 1, ease: "power1.out", "clip-path": "circle(150% at 100% 0%)"}, "start")
-//   .staggerFrom($(".nav-links li, .nav-links button"), 0.5, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=0.3")
+  navExpanded
+    .to($(".hamburger .bar:nth-child(1)"), 0.3, {y: 8, rotation: 45}, "start")
+    .to($(".hamburger .bar:nth-child(2)"), 0.3, {opacity: 0}, "start")
+    .to($(".hamburger .bar:nth-child(3)"), 0.3, {y: -8, rotation: -45}, "start")
+    .to($(".nav-links ul"), {duration: 1, ease: "power1.out", "clip-path": "circle(150% at 100% 0%)"}, "start")
+    .staggerFrom($(".nav-links li, .nav-links button"), 0.5, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=0.3");
+}
+
+function disableMobileCode() {
+  // Remove click event handler
+  $(".hamburger").off("click");
+
+  // Clear the timeline animation
+  if (navExpanded) {
+    navExpanded.kill(); // Kill the timeline to clear it
+  }
+}
 
 // tried to turn standard js code into jQuery code
 
@@ -86,24 +111,3 @@ gsap.to("[data-speed]", {
   y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window), ease: "none",
   scrollTrigger: {start: 0, end: "max", invalidateOnRefresh: true, scrub: 0}
 });
-
-// const config = {
-//   rootMargin: "0px",
-//   threshold: 0.05
-// };
-
-// const observer = new IntersectionObserver(function (entries, self) {
-//   entries.forEach(entry => {
-//     if(entry.isIntersecting) {
-//       $("nav").addClass("nav-dark")
-//     } else {
-//       $("nav").removeClass("nav-dark")
-//     }
-//   });
-// }, config);
-
-// const entry = document.querySelectorAll(".dark");
-
-// entry.forEach(section => {
-//   observer.observe(section);
-// });
