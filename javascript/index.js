@@ -50,30 +50,10 @@ tl
   .to(counter, 1, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
   .to(".percent", 1, {opacity: 0})
   .to(".preloader", 1, {width: 0}, "-=0.5")
-  .from(".bg-left", 1, {ease: "power4.inOut", width: 0})
   .from("nav", 1, {opacity: 0}, "=-1")
-  .from(".hero", 2, {xPercent: -130}, "=-0.5")
-  .from(".hero img", 2, {xPercent: 130}, "=-2")
   .from(".text-container", 1, {opacity: 0, yPercent: 20}, "=-1")
   .from(".rotate", 1, {opacity: 0}, "=-1")
-  .set(".hero", {"box-shadow": "0 0 50px rgba(0, 0, 0, 0.9)"});
   // .from("body", 2, {"background-image": "radial-gradient(at 50% 50%, transparent 0%, transparent 100%)"});
-
-$(document).mousemove(function(event) {
-  var xPos = (event.clientX / $(window).width())-0.5,
-      yPos = (event.clientY / $(window).height())-0.5,
-      plane = $(".hero");
- 
- TweenLite.to(plane, 0.5, {
-   rotationY: 20 * xPos, 
-   rotationX: -20 * yPos,
-  //  x: -200 * xPos,
-  //  y: -200 * yPos,
-   ease: "Power4.inOut",
-   transformPerspective: 1000,
-   transformOrigin: "center"
- });
-});
 
 // Modal for portfolio
 
