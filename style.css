@@ -384,7 +384,6 @@ section
   height: 100%;
   padding: 5vh 0;
   background-color: var(--light);
-  text-align: center;
 }
 
 .section-skills
@@ -396,6 +395,7 @@ section
 .section-cv
 {
   scroll-margin-top: 25vh;
+  background-color: #1a1a1d;
 }
 
 .section-cv .container
@@ -630,6 +630,12 @@ h4
   grid-auto-rows: 270px;
   grid-auto-flow: dense;
   grid-gap: 2rem;
+}
+
+#cv
+{
+  margin: auto;
+  width: 100%;
 }
 
 .image-grid .image-box
