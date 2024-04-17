@@ -94,11 +94,6 @@ nav .container
   fill: red;
 }
 
-#logo:hover
-{
-  transform: scale(1.2);
-}
-
 .nav-links ul
 {
   display: flex;
@@ -113,7 +108,7 @@ nav .container
 {
   position: relative;
   text-decoration: none;
-  color: var(--dark);
+  color: var(--light);
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
   transition: 300ms;
@@ -495,6 +490,105 @@ h4
   width: 100%;
 }
 
+.preloader
+{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+  background-color: #0a0a0d;
+  flex-direction: column;
+}
+
+.percent
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  font-size: 150px;
+  mix-blend-mode: difference;
+}
+
+.bar
+{
+  width: 60%;
+  height: 10%;
+}
+
+.section-landing
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Hide any overflow */
+
+  background-color: #1a1a1d90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: radial-gradient(#4a4a4090 50%, #1a1a1d 50%);
+  background-position: 0% 0%;
+  background-size: .5vmin .5vmin; */
+}
+
+.background-clip
+{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; /* Ensure the video covers the entire screen width */
+  min-height: 100%; /* Ensure the video covers the entire screen height */
+  width: auto; /* Let the browser adjust the width to maintain aspect ratio */
+  height: auto;
+  z-index: -1;
+}
+
+.text-container
+{
+  width: 45%;
+  text-align: center;
+}
+
+.text-container h1
+{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  bottom: 200px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--cyan);
+  color: transparent;
+}
+
+.text-container h1:first-child
+{
+  color: var(--cyan);
+  z-index: 2;
+}
+
+.rotate
+{
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 7rem;
+  /* transform: translate(-20%, -20%); */
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .image-grid .image-box
 {
   position: relative;
@@ -803,15 +897,9 @@ input:valid ~ .details, textarea:valid ~ .details
 @media (max-width: 991px) {
   nav
   {
-    bottom: 0;
-    left: 0;
-    background-color: #4000ff;
-    color: #fff;
-    width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    background-color: none;
+    backdrop-filter: none;
   }
 
   .hamburger
@@ -822,12 +910,6 @@ input:valid ~ .details, textarea:valid ~ .details
   .nav-links ul
   {
     position: fixed;
-    /* position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start; */
     top: 80px;
     left: 0px;
     gap: 0;
@@ -835,7 +917,7 @@ input:valid ~ .details, textarea:valid ~ .details
     background-color: #0a0a0d;
     text-align: left;
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     transition: all 300ms ease;
     clip-path: circle(0% at 100% 0%);
   }
@@ -981,104 +1063,4 @@ input:valid ~ .details, textarea:valid ~ .details
   {
     max-width: 1520px;
   }
-
-}
-
-.preloader
-{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
-  height: 100vh;
-  z-index: 50;
-  background-color: #0a0a0d;
-  flex-direction: column;
-}
-
-.percent
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  color: white;
-  font-size: 150px;
-  mix-blend-mode: difference;
-}
-
-.bar
-{
-  width: 60%;
-  height: 10%;
-}
-
-.section-landing
-{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden; /* Hide any overflow */
-
-  background-color: #1a1a1d90;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background: radial-gradient(#4a4a4090 50%, #1a1a1d 50%);
-  background-position: 0% 0%;
-  background-size: .5vmin .5vmin; */
-}
-
-.background-clip
-{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; /* Ensure the video covers the entire screen width */
-  min-height: 100%; /* Ensure the video covers the entire screen height */
-  width: auto; /* Let the browser adjust the width to maintain aspect ratio */
-  height: auto;
-  z-index: -1;
-}
-
-.text-container
-{
-  width: 45%;
-  text-align: center;
-}
-
-.text-container h1
-{
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  left: 0px;
-  bottom: 200px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--cyan);
-  color: transparent;
-}
-
-.text-container h1:first-child
-{
-  color: var(--cyan);
-  z-index: 2;
-}
-
-.rotate
-{
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  width: 7rem;
-  /* transform: translate(-20%, -20%); */
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
