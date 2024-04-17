@@ -7,7 +7,7 @@ $(document).ready(function() {
 });
 
 function checkScreenWidth() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 991) {
     // Mobile or tablet screen width
     enableMobileCode();
   } else {

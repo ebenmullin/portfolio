@@ -88,11 +88,6 @@ nav .container
   padding: 10px 0px;
 }
 
-.nav-dark .nav-links li a
-{
-  color: var(--light);
-}
-
 #logo
 {
   transition: 300ms;
@@ -138,11 +133,7 @@ nav .container
 }
 
 
-.nav-links li a:hover::after
-{
-  width: 100%;
-}
-
+.nav-links li a:hover::after,
 .nav-links li a.active::after
 {
   width: 100%;
@@ -854,6 +845,18 @@ input:valid ~ .details, textarea:valid ~ .details
 }
 
 @media (max-width: 991px) {
+  nav
+  {
+    bottom: 0;
+    left: 0;
+    background-color: #4000ff;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 
   .hamburger
   {
@@ -863,15 +866,27 @@ input:valid ~ .details, textarea:valid ~ .details
   .nav-links ul
   {
     position: fixed;
+    /* position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start; */
     top: 80px;
     left: 0px;
     gap: 0;
     flex-direction: column;
-    text-align: center;
-    background-color: #3a3a3050;
+    background-color: #0a0a0d;
+    text-align: left;
     width: 100%;
+    /* height: 100%; */
     transition: all 300ms ease;
     clip-path: circle(0% at 100% 0%);
+  }
+
+  .nav-links li a
+  {
+    font-size: 3.5rem;
   }
   
   .nav-links li
@@ -899,16 +914,13 @@ input:valid ~ .details, textarea:valid ~ .details
     flex-direction: column;
   }
 
-  .left, .info, .img-container .mask, .img-container .info
+  .left,
+  .info,
+  .text-container,
+  .img-container .mask,
+  .img-container .info
   {
     width: 100%;
-  }
-
-  .text-container
-  {
-    width: 90%;
-    text-align: center;
-    margin: auto;;
   }
 
   .text-container h1
