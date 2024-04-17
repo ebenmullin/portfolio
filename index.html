@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Eben Mullin | my Portfolio</title>
+        <title>Eben Mullin | My Portfolio</title>
         <meta charset="utf-8">
         <meta name="title" content="Eben Mullin | my Portfolio">
         <meta name="description" content="Digital Portfolio website for Eben Mullin">
@@ -34,12 +34,11 @@
 
         <nav class="nav-dark">
             <div class="container">
-                <img id="logo" src="assets/logo5.png" height="60px" alt="logo">
+                <a href="index.html"><img id="logo" src="assets/logo_light.png" height="60px" alt="logo"></a>
                 <div class="nav-links">
                     <ul>
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#cv">CV</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <button class="btn"><a href="#footer">Contact Me</a></button>
                     </ul>
@@ -63,19 +62,19 @@
                     <h1 data-speed="0.88">My Portfolio</h1>
                     <h1 data-speed="0.84">My Portfolio </h1>
                     <h1 data-speed="0.80">My Portfolio </h1>
-                    <p class="paragraph">Welcome to my digital Portfolio! I coded this website so I can show off my Projects and skills</p>
-                    <p class="paragraph">Click the button bellow to go straight to my portfolio or scroll down and check out my website</p>
+                    <p class="paragraph">Welcome to my digital portfolio! I coded this website to showcase my projects and skills. <br>
+                        Click the button below to go straight to my portfolio, or scroll down and check out my website.</p>
                     <br>
                     <button class="btn btn-secondary"><a href="portfolio.html">Visit Page</a></button>
                 </div>
             <div class="rotate">
-                <img src="assets/rotate.png" width="100%" alt="scroll down">
+                <img src="assets/rotate_2.png" width="100%" alt="scroll down">
             </div>
         </section>
         <div class="container">
-            <section class="section">
+            <section class="section" id="about">
                 <img class="aligner-flex" src="assets/logo5.png" height="256" alt="logo">
-                <hr>
+                <hr class="hr">
                 <div class="aligner-flex">
                     <div class="left">
                         <h3>About me</h3>
@@ -158,6 +157,8 @@
                                 <p class="paragraph">I have started working on designing cars in Photoshop, then bringing them to 3D with Blender. This is one of my cars that I've been working on for the past three months.</p>
                             </div>
                             <p>Jan 2024 - April - 2024</p>
+                            <br> <br>
+                            <a href="model.html">LEARN MORE</a>
                         </div>
                     </div>
     
@@ -169,7 +170,10 @@
                         </div>
                         <div class="info">
                             <div class="text-col">
-                                <h3>Graphic Design Scholarship</h3>
+                                <div class="title">
+                                    <span>Graphic Design Scholarship</span>
+                                    <h2>AEROCORE</h2>
+                                </div>
                                 <p class="paragraph">Last year, I received a graphic design scholarship for my Aerocore project. Unfortunately, the video was limited to three minutes, so feel free to pause and read at your own pace.</p>
                             </div>
                             <p><a href="design.html">View More</a></p>
@@ -178,10 +182,10 @@
             </section>
         </div>
 
-        <section class="section-cv dark" id="cv">
+        <!-- <section class="section-cv dark" id="cv">
             <div class="container">
                 <h3>Curriculum Vitae</h3>
-                <!-- <img src="assets/CV_13.jpg" alt="CV" id="cv"> -->
+                <img src="assets/CV_13.jpg" alt="CV" id="cv">
                 <h4>Eben Mullin</h4>
                     <p><b>Email:</b> ebminer05@gmail.com</p>
                     <p><b>Github:</b> @touchpotato</p>
@@ -192,12 +196,24 @@
                         I'm very experienced with CSS and HTML and I have coded several websites for personal projects and friends.
                         I've learnt most of my skills from a full stack web dev course online.
                     </p>
-                    <hr>
+                    <hr class="hr">
 
                 <h4>Skills</h4>
                     <p><b>Languages:</b> HTML, CSS, JavaScript, Java, Python, Json</p>
                     <p><b>Tools:</b> Git, VSCode, Figma, Blender, Gimp, Davinci Resolve, ReelSteady Go</p>
-                    <hr>
+                    <hr class="hr">
+
+                <h4><span class="fa-solid fa-award"></span> Achievements</h4>
+                <hr>
+                <table>
+                    <tr>
+                    <td style="width: 20%;">OCT 2022</td>
+                    <td>
+                        <b>Evolocity Vehicle Engineering.</b><br>
+                        Earned Best in Show & Excellence in Engineering Award
+                    </td>
+                    </tr>
+                </table>
 
                 <h4>Experience</h4>
                     <p><b>FPV Drone</b></p>
@@ -240,7 +256,7 @@
                         I thought that a fun way to learn python would be to code a 2d platform game,
                         with help from 2d game library "pygame" I was able to create a simple platformer.
                     </p>
-                    <hr>
+                    <hr class="hr">
 
                 <h4>Education</h4>
                     <p><b>School</b></p>
@@ -255,11 +271,11 @@
                     <br>
                     <p><span class="fa-solid fa-file-lines"></span> <a href="assets/CV_13.jpg">Download PDF</a></p>
             </div>
-        </section>
-
+        </section> -->
         <footer class="footer dark" id="footer">
             <div class="container">
                 <h1>Get in Touch</h1>
+                <hr>
                 <div class="row">
                     <div class="footer-col lg">
                         <h4>Information</h4>
@@ -280,8 +296,7 @@
                         <h4>Links</h4>
                         <ul>
                             <li><a href="index.html"><span class="fa-solid fa-house"></span> Home </a></li>
-                            <li><a href="index.html#about"><span class="fa-solid fa-circle-info"></span> About </a></li>
-                            <li><a href="index.html#skills"><span class="fa-solid fa-file-lines"></span> CV </a></li>
+                            <li><a href="#about"><span class="fa-solid fa-circle-info"></span> About </a></li>
                             <li><a href="portfolio.html"><span class="fa-solid fa-image-portrait"></span> Portfolio </a></li>
                             <li><a href="contact.html"><span class="fa-solid fa-message"></span> Contact </a></li>
                         </ul>
@@ -292,7 +307,6 @@
                             <li><a href="https://github.com/touchpotato"><span class="fab fa-github"></span> Github</a></li>
                             <li><a href="https://discord.gg/KFj7shw7s7"><span class="fab fa-discord"></span> Discord</a></li>
                             <li><a href="https://www.youtube.com/channel/UCasuLHiojLWPLBp9XKo-ILA"><span class="fab fa-youtube"></span> Youtube</a></li>
-                            <li><a href="https://www.twitter.com"><span class="fab fa-twitter"></span> Twitter</a></li>
                             <li><a href="https://ko-fi.com/ebenmullin"><span class="fa-solid fa-dollar-sign"></span> Donate</a></li>
                         </ul>
                     </div>
@@ -318,7 +332,7 @@
                         </form>
                     </div>
                 </div>
-                <hr>
+                <hr class="hr">
             </div>
         </footer>
 
