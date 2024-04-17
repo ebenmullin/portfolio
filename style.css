@@ -451,7 +451,6 @@ h2
 .title
 {
   color: var(--pink);
-  transform: scaleX(1.2);
 }
 
 .title span
@@ -909,6 +908,12 @@ input:valid ~ .details, textarea:valid ~ .details
     font-size: 0.875rem;
   }
 
+  .title h2
+  {
+    font-size: 30vw;
+    text-align: center;
+  }
+
   h3
   {
     font-size: 2rem;
@@ -1103,12 +1108,17 @@ input:valid ~ .details, textarea:valid ~ .details
 @media (min-width: 1600px) {
   .container
   {
-    max-width: 1380px;
+    max-width: 1280px;
   }
   
   .aligner-flex
   {
-    max-width: 1380px;
+    max-width: 1280px;
+  }
+
+  .title
+  {
+    transform: scaleX(1.2);
   }
 }
 
@@ -1121,5 +1131,17 @@ input:valid ~ .details, textarea:valid ~ .details
   .aligner-flex
   {
     max-width: 1520px;
+  }
+}
+
+@media (min-width: 2700px) {
+  .container
+  {
+    max-width: 1720px;
+  }
+  
+  .aligner-flex
+  {
+    max-width: 1720px;
   }
 }
