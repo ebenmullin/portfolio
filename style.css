@@ -214,50 +214,6 @@ nav .container
   border-radius: 3px;
 }
 
-.text-container
-{
-  width: 45%;
-  text-align: center;
-}
-
-.text-container h1
-{
-  position: absolute;
-  text-align: center;
-  bottom: 200px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--cyan);
-  color: transparent;
-}
-
-.text-container h1:first-child
-{
-  color: var(--cyan);
-  z-index: 2;
-}
-
-.rotate
-{
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  width: 7rem;
-  /* transform: translate(-20%, -20%); */
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from
-  {
-    transform: rotate(0deg);
-  }
-
-  to
-  {
-    transform: rotate(360deg);
-  }
-}
-
 .aligner
 {
   position: relative;
@@ -1062,39 +1018,67 @@ input:valid ~ .details, textarea:valid ~ .details
 
 .section-landing
 {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #2196f310;
+  overflow: hidden; /* Hide any overflow */
+
+  background-color: #1a1a1d90;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  background: radial-gradient(#4a4a40c0 10%, #1a1a1dc0 10%);
+  /* background: radial-gradient(#4a4a4090 50%, #1a1a1d 50%);
   background-position: 0% 0%;
-  background-size: 5vmin 5vmin;
+  background-size: .5vmin .5vmin; */
 }
 
 .background-clip
 {
-  width: 100%;
   position: absolute;
   right: 0;
   bottom: 0;
+  min-width: 100%; /* Ensure the video covers the entire screen width */
+  min-height: 100%; /* Ensure the video covers the entire screen height */
+  width: auto; /* Let the browser adjust the width to maintain aspect ratio */
+  height: auto;
   z-index: -1;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .background-clip
-  {
-    width: 100%;
-    height: auto;
-  }
+.text-container
+{
+  width: 45%;
+  text-align: center;
 }
 
-@media (max-aspect-ratio: 16/9) {
-  .background-clip
-  {
-    width: auto;
-    height: 100%;
-  }
+.text-container h1
+{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  bottom: 200px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--cyan);
+  color: transparent;
+}
+
+.text-container h1:first-child
+{
+  color: var(--cyan);
+  z-index: 2;
+}
+
+.rotate
+{
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 7rem;
+  /* transform: translate(-20%, -20%); */
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
