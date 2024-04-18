@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-@font-face {
-  font-family: "Mosk";
-  src: url("assets/fonts/Mosk.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --light: #f0f0f5;
   --dark: #1a1a1d;
@@ -31,12 +24,6 @@ body
   font-size: 1rem;
 }
 
-h1, .highlight
-{
-  font-family: "Mosk";
-  
-}
-
 h3
 {
   font-weight: 400;
@@ -46,11 +33,6 @@ h3
 p
 {
   font-weight: 400;
-}
-
-.dark
-{
-  background-color: #1a1a1d;
 }
 
 a, p, li
@@ -152,22 +134,21 @@ nav .container
 
 .btn-secondary
 {
-  width: 240px;
+  width: 120px;
   height: 40px;
-  color: var(--gray);
-  background: -webkit-linear-gradient(0deg, transparent 50%, var(--gray) 50%);
-  border: 2px solid var(--gray);
-  background-size: 480px;
+  background: -webkit-linear-gradient(0deg, transparent 50%, var(--pink) 50%);
+  border: 2px solid var(--pink);
+  background-size: 240px;
 }
 
 .btn-secondary a
 {
-  color: var(--gray);
+  color: var(--light);
 }
 
 .btn-secondary:hover
 {
-  background-position: 240px 0;
+  background-position: 120px 0;
 }
 
 .btn-secondary:hover a
@@ -243,31 +224,6 @@ nav .container
 {
   margin-bottom: 2rem;
 }
-
-/* .section-parallax
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image:
-  radial-gradient(at 75% 45%, #5272e5 0%, transparent 50%),
-  radial-gradient(at 35% 65%, #ab5ce0 0%, transparent 50%),
-  radial-gradient(at 10% 20%, #e067ac 0%, transparent 50%),
-  radial-gradient(at 70% 25%, #ff70d4 0%, transparent 50%),
-  radial-gradient(at 90% 80%, #ff70d4 0%, transparent 100%);
-  background-color:#1a1a1d;
-  background-attachment: fixed;
-  width: 100%;
-  height: 50vh;
-}
-
-.section-parallax h1,
-.section-parallax h3
-{
-  color: #f0f0f5c0;
-  font-family: "Mosk";
-} */
-
 section
 {
   width: 100%;
@@ -435,8 +391,8 @@ section
 
 h1
 {
-  font-weight: normal;
-  font-size: 7vw;
+  font-weight: 900;
+  font-size: 8vw;
   color: var(--gray);
 }
 
@@ -550,15 +506,36 @@ h4
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden; /* Hide any overflow */
+  overflow: hidden;
 
   background-color: #1a1a1d90;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   /* background: radial-gradient(#4a4a4090 50%, #1a1a1d 50%);
   background-position: 0% 0%;
   background-size: .5vmin .5vmin; */
+}
+
+.renamethispleaselateroritsgoingtopissmeoff
+{
+  mix-blend-mode: difference;
+  padding-top: 73vh;
+}
+
+.grid-renamethis
+{
+  display: grid;
+  grid-column-gap: 16px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-renamethis p
+{
+  text-align: center;
+  color: var(--light);
 }
 
 .gallery ul
@@ -587,45 +564,41 @@ h4
   position: absolute;
   right: 0;
   bottom: 0;
-  min-width: 100%; /* Ensure the video covers the entire screen width */
-  min-height: 100%; /* Ensure the video covers the entire screen height */
-  width: auto; /* Let the browser adjust the width to maintain aspect ratio */
-  height: auto;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
-.text-container
+.hero
 {
-  width: 45%;
   text-align: center;
+  position: absolute;
+  mix-blend-mode: difference;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero .paragraph
+{
+  color: var(--light);
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .text-container h1
 {
-  position: absolute;
-  text-align: center;
+  display: inline-block;
   width: 100%;
-  left: 0px;
-  bottom: 200px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--cyan);
-  color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
-.text-container h1:first-child
-{
-  color: var(--cyan);
-  z-index: 2;
-}
-
-/* Figuire out a way to make rotate icon inline with container*/
 .rotate
 {
-  position: absolute;
-  bottom: 5%;
-  left: 10%;
   width: 5rem;
-  /* transform: translate(-20%, -20%); */
   animation: rotate 20s linear infinite;
 }
 
@@ -980,8 +953,9 @@ input:valid ~ .details, textarea:valid ~ .details
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: #1a1a1d;
-    background-image: url("https://www.truestaging.co.uk/wp-content/themes/true-staging/public/ru.svg");
+    background-color: var(--dark);
+    /* background-image: url("assets/menu2.png"); */
+    background-image: url("assets/menu.png");
     background-size: cover;
     z-index: -1;
     clip-path: circle(0% at 93% 4.5%);
@@ -1036,16 +1010,10 @@ input:valid ~ .details, textarea:valid ~ .details
 
   .left,
   .info,
-  .text-container,
   .img-container .mask,
   .img-container .info
   {
     width: 100%;
-  }
-
-  .text-container h1
-  {
-    font-size: 15vw;
   }
 
   .img-container:nth-child(even) .info
