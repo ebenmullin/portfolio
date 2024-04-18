@@ -420,7 +420,8 @@ section
 {
   position: relative;
   width: 100%;
-  height: calc(40vh);
+  padding: 0;
+  height: calc(100vh / 3);
 }
 
 .section-banner img
@@ -617,12 +618,13 @@ h4
   z-index: 2;
 }
 
+/* Figuire out a way to make rotate icon inline with container*/
 .rotate
 {
   position: absolute;
   bottom: 5%;
-  left: 5%;
-  width: 7rem;
+  left: 10%;
+  width: 5rem;
   /* transform: translate(-20%, -20%); */
   animation: rotate 20s linear infinite;
 }
@@ -689,7 +691,7 @@ h4
 
 .container
 {
-  width: calc(100% - 2rem);
+  width: calc(100% - 4rem);
   margin: auto;
 }
 
@@ -898,7 +900,7 @@ input:valid ~ .details, textarea:valid ~ .details
 
 	100%
   {
-    transform: translatey(5vh);
+    transform: translateY(5vh);
 	}
 }
 
@@ -910,7 +912,7 @@ input:valid ~ .details, textarea:valid ~ .details
 
   .title h2
   {
-    font-size: 30vw;
+    font-size: 27vw;
     text-align: center;
   }
 
@@ -958,7 +960,6 @@ input:valid ~ .details, textarea:valid ~ .details
 @media (max-width: 991px) {
   nav
   {
-    background-color: #1a1a1d90;
     backdrop-filter: none;
   }
 
@@ -971,34 +972,51 @@ input:valid ~ .details, textarea:valid ~ .details
   {
     display: block;
   }
+
+  .nav-links .wrapper
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1a1a1d;
+    background-image: url("https://www.truestaging.co.uk/wp-content/themes/true-staging/public/ru.svg");
+    background-size: cover;
+    z-index: -1;
+    clip-path: circle(0% at 93% 4.5%);
+  }
   
   .nav-links ul
   {
-    position: fixed;
-    top: 5rem;
-    left: 0px;
-    gap: 0;
     flex-direction: column;
-    background-color: #1a1a1d;
-    width: 100%;
+    align-items: stretch;
     height: 100%;
-    transition: all 300ms ease;
-    clip-path: circle(0% at 100% 0%);
+    justify-content: end;
+    gap: 0;
+    padding: 5vh 2rem;
+    font-weight: 500;
+  }
+
+  .nav-links li
+  {
+    border-bottom: 1px solid #333;
+    padding: 1rem 0;
   }
 
   .nav-links li a
   {
-    font-size: 3.5rem;
-  }
-  
-  .nav-links li
-  {
-    margin: 0.5rem 0;
+    font-size: 2.5rem;
   }
 
-  .nav-links button
+  .nav-links li a.active::after
   {
-    margin: 0.5rem 0;
+    width: 0;
+  }
+  
+  .nav-links .btn
+  {
+    display: none;
   }
 
   .image-grid {
