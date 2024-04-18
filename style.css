@@ -418,7 +418,6 @@ h2
 
 .big-text
 {
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   color: var(--gray);
   font-size: 7rem;
@@ -472,27 +471,30 @@ h4
 .preloader
 {
   position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
   width: 100%;
   height: 100vh;
-  z-index: 50;
+  z-index: 0;
+  /* z-index: 50; */
   background-color: #0a0a0d;
   flex-direction: column;
 }
 
 .percent
 {
+  font-family: "Bebas Neue", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100%;
-  color: white;
-  font-size: 150px;
-  mix-blend-mode: difference;
+  color: var(--light);
+  font-size: 10vw;
 }
 
 .bar
@@ -587,7 +589,7 @@ h4
   letter-spacing: -1px;
 }
 
-.text-container h1
+.renamethispleaselateroritsgoingtopissmeoff h1
 {
   display: inline-block;
   width: 100%;

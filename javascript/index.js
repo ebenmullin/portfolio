@@ -71,13 +71,18 @@ let tl = gsap.timeline({
   defaults: {ease: "power2.out", duration: 2}
 });
 
+window.addEventListener('load', function() {
+  console.log("everything fully loaded")
+  // tl.to(counter, 1, { value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%" });
+});
+
 tl
-  .to(counter, 1, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
+  .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
   .to(".percent", 1, {opacity: 0})
-  .to(".preloader", 1, {width: 0}, "-=0.5")
+  .staggerFrom($(".hero .paragraph"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1)
+  .staggerFrom($(".renamethispleaselateroritsgoingtopissmeoff"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=2")
+  .to(".preloader", 1, {opacity: 0}, "-=0.5")
   .from("nav", 1, {opacity: 0}, "=-1")
-  .from(".text-container", 1, {opacity: 0, yPercent: 20}, "=-1")
-  .from(".rotate", 1, {opacity: 0}, "=-1")
 
 // Modal for portfolio
 
