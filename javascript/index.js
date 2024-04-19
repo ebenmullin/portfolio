@@ -47,7 +47,6 @@ let masks = document.querySelectorAll(".mask");
 
 masks.forEach(mask => {
   let image = mask.querySelector("img");
-  console.log(image + "testing testing");
   let iframe = mask.querySelector("iframe");
   
   let tl = gsap.timeline({
@@ -80,7 +79,7 @@ tl
   .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
   .to(".percent", 1, {opacity: 0})
   .staggerFrom($(".hero .paragraph"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1)
-  .staggerFrom($(".renamethispleaselateroritsgoingtopissmeoff"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=2")
+  .staggerFrom($(".content"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=2")
   .to(".preloader", 1, {opacity: 0}, "-=0.5")
   .from("nav", 1, {opacity: 0}, "=-1")
 
