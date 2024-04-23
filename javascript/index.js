@@ -109,7 +109,7 @@ modal.on("click", (e) => {
   }
 });
 
-const vid = document.querySelector('.background-clip');
+const vid = document.querySelector('.landing-video');
 const ratio = 16/9; //!you may need to 'ask' to find out the correct ratio, this is the one for this video and is common.
 function resize() {
   const w = window.innerWidth;
