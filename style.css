@@ -332,8 +332,8 @@ h2
 .title
 {
   color: var(--pink);
-  transform: scaleX(1.2);
-  transform-origin: 0% 0%;
+  /* transform: scaleX(1.2); */
+  /* transform-origin: 0% 0%; */
 }
 
 .title span
@@ -472,7 +472,7 @@ h4
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   place-content: center;
-  row-gap: 100px;
+  row-gap: 1.75rem;
 }
 
 .gallery ul li
@@ -483,17 +483,6 @@ h4
 .gallery ul .full-width
 {
   grid-column: span 2;
-}
-
-.gallery ul figure
-{
-  max-width: 80%;
-}
-
-.gallery ul figure.up
-{
-  margin-top: 40%;
-  background-color: #2196f3;
 }
 
 .gallery img {
