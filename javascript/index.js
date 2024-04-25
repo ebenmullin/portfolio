@@ -47,6 +47,7 @@ let masks = document.querySelectorAll(".mask");
 
 masks.forEach(mask => {
   let image = mask.querySelector("img");
+  let video = mask.querySelector("video");
   let iframe = mask.querySelector("iframe");
   
   let tl = gsap.timeline({
@@ -56,6 +57,7 @@ masks.forEach(mask => {
   tl
     .from(mask, 1.5, {xPercent: -100, ease: Power2.out})
     .from(image, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
+    .from(video, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
     .from(iframe, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
 });
 
@@ -76,7 +78,7 @@ window.addEventListener('load', function() {
 });
 
 tl
-  .to(counter, 2, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
+  .to(counter, 1, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
   .to(".percent", 1, {opacity: 0})
   .staggerFrom($(".hero .paragraph"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1)
   .staggerFrom($(".content"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=2")
