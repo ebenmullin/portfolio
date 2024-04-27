@@ -48,7 +48,6 @@ let masks = document.querySelectorAll(".mask");
 masks.forEach(mask => {
   let image = mask.querySelector("img");
   let video = mask.querySelector("video");
-  let iframe = mask.querySelector("iframe");
   
   let tl = gsap.timeline({
     scrollTrigger: {trigger: mask, toggleActions: "restart none none reset"}
@@ -57,8 +56,7 @@ masks.forEach(mask => {
   tl
     .from(mask, 1.5, {xPercent: -100, ease: Power2.out})
     .from(image, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
-    .from(video, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out})
-    .from(iframe, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
+    .from(video, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
 });
 
 let counter = {

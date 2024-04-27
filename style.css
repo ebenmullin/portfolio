@@ -136,13 +136,6 @@ nav .container
   border-radius: 3px;
 }
 
-.aligner
-{
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-}
-
 .info-row
 {
   display: grid;
@@ -153,7 +146,6 @@ nav .container
 
 .aligner-flex
 {
-  position: relative;
   display: flex;
   margin: auto;
   flex-direction: row;
@@ -165,16 +157,15 @@ nav .container
   width: 70%;
 }
 
-.left img
-{
-  width: 100%;
-}
+/* IMPORTANT */
+
+/* optimize and reduce class amount by combining project info class and others */
 
 .project-info
 {
   grid-column-gap: 2rem;
-  grid-row-gap: 0rem;
-  flex-wrap: wrap;
+  /* grid-row-gap: 0rem; */
+  /* flex-wrap: wrap; */
   align-items: center;
   margin-bottom: 1rem;
   display: flex;
@@ -182,19 +173,19 @@ nav .container
 
 .project-number
 {
-  letter-spacing: -.05em;
+  /* letter-spacing: -.05em; */
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.2;
+  /* line-height: 1.2; */
   color: #e8e6e3;
+  color: var(--light);
 }
 
 .project-label-wrapper
 {
   grid-column-gap: 1rem;
-  flex-wrap: wrap;
-  flex: 0 auto;
-  align-items: center;
+  /* flex-wrap: wrap; */
+  /* flex: 0 auto; */
   display: flex;
 }
 
@@ -203,7 +194,7 @@ section
   width: 100%;
   height: 100%;
   padding: 5vh 0;
-  background-color: var(--dark);
+  /* background: #0a0a0d; */
 }
 
 .modal
@@ -297,8 +288,6 @@ section
   flex: 1;
 }
 
-/* IMPORTANT */
-/* can also use img mask for video when all iframe gone, can remove video-wrapper */
 .mask img,
 .mask video
 {
@@ -332,14 +321,6 @@ section
   transform-origin: left;
   object-fit: cover;
   display: block;
-}
-
-.video-wrapper
-{
-  position: relative;
-  height: 0;
- /* height / width * 100% = 315 / 560 * 100% = 56.25% */
-  padding-top: 56.25%;
 }
 
 /* TEXT - HEADERS - FONTS */
@@ -462,21 +443,18 @@ h4
 
 .section-banner
 {
-  position: relative;
-  width: 100%;
   height: 100vh;
-  overflow: hidden;
-  display: flex;
-  background-color: #2196f3;
-  /* height: 100vh; */
+  width: 100vw;
+  /* overflow: hidden; */
 }
 
 .section-banner .background-video
 {
-  margin: auto;
-  width: 1920px;
-  object-fit: cover;
-  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .content
@@ -588,6 +566,7 @@ h4
   color: var(--light);
   font-size: 13vw;
 }
+
 .rotate
 {
   width: 5rem;
@@ -625,11 +604,6 @@ h4
 {
   transform: scale(1.1);
   filter: brightness(0.5);
-}
-
-.image-grid .image-box:hover h3
-{
-  opacity: 1;
 }
 
 .footer
@@ -836,23 +810,6 @@ input:valid ~ .details, textarea:valid ~ .details
   background: var(--gray);
 }
 
-@keyframes float {
-  0%
-  {
-    transform: translatey(5vh);
-	}
-
-	50%
-  {
-    transform: translatey(-5vh);
-	}
-
-	100%
-  {
-    transform: translateY(5vh);
-	}
-}
-
 @media (max-width: 480px) {
   .paragraph
   {
@@ -880,16 +837,11 @@ input:valid ~ .details, textarea:valid ~ .details
     width: 100%;
     text-align: center;
   }
-
+/* 
   .section-portfolio
   {
     text-align: left;
-  }
-
-  .img-container .paragraph
-  {
-    display: none;
-  }
+  } */
 
   .footer-col h4::before
   {
@@ -906,16 +858,7 @@ input:valid ~ .details, textarea:valid ~ .details
 }
 
 @media (max-width: 991px) {
-  nav
-  {
-    backdrop-filter: none;
-  }
-
-  .hamburger
-  {
-    display: block;
-  }
-
+  .hamburger,
   .info-row
   {
     display: block;
@@ -961,13 +904,10 @@ input:valid ~ .details, textarea:valid ~ .details
   {
     width: 0;
   }
-  
-  .nav-links .btn
-  {
-    display: none;
-  }
 
-  .mobile-hide
+  .mobile-hide,
+  .nav-links .btn,
+  .hero-flex .center
   {
     display: none;
   }
@@ -982,11 +922,6 @@ input:valid ~ .details, textarea:valid ~ .details
     text-align: left;
   }
 
-  .hero-flex .center
-  {
-    display: none;
-  }
-
   .image-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 250px;
@@ -997,29 +932,19 @@ input:valid ~ .details, textarea:valid ~ .details
     grid-row: unset;
   }
 
-  .aligner-flex
-  {
-    flex-direction: column;
-  }
-
+  .aligner-flex,
   .img-container
   {
     flex-direction: column;
   }
 
-  .img-container .info
-  {
-    width: 100%;
-  }
-
-/* 
   .left,
   .info,
   .img-container .mask,
   .img-container .info
   {
     width: 100%;
-  }*/
+  }
 
   .footer
   {
@@ -1070,11 +995,6 @@ input:valid ~ .details, textarea:valid ~ .details
     max-width: 1216px;
   }
 
-  .aligner-flex
-  {
-    max-width: 1216px;
-  }
-
   .content h1
   {
     font-size: 10rem;
@@ -1087,11 +1007,6 @@ input:valid ~ .details, textarea:valid ~ .details
     max-width: 1350px;
   }
   
-  .aligner-flex
-  {
-    max-width: 1350px;
-  }
-
   .content h1
   {
     font-size: 11rem;
