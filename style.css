@@ -173,11 +173,8 @@ nav .container
 
 .project-number
 {
-  /* letter-spacing: -.05em; */
   font-size: 1.5rem;
   font-weight: 600;
-  /* line-height: 1.2; */
-  color: #e8e6e3;
   color: var(--light);
 }
 
@@ -194,7 +191,6 @@ section
   width: 100%;
   height: 100%;
   padding: 5vh 0;
-  /* background: #0a0a0d; */
 }
 
 .modal
@@ -254,14 +250,6 @@ section
   justify-content: space-between;
   gap: 2rem;
   margin: 20% 0;
-}
-
-.img-container h3
-{
-  font-size: 37px;
-  color: #e8e6e3;
-  text-transform: uppercase;
-  font-weight: 800;
 }
 
 .img-container a
@@ -360,12 +348,11 @@ h2
 
 h3
 {
-  font-weight: 600;
-  font-weight: 400;
   font-size: 2.5rem;
   color: var(--light);
   margin-bottom: 1rem;
-  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 h4
@@ -433,28 +420,29 @@ h4
   width: 100%;
   height: 100vh;
   overflow: hidden;
-
   background-color: #1a1a1d50;
-  /* background: radial-gradient(#4a4a4090 50%,
-  position: relative; #1a1a1d 50%);
-  background-position: 0% 0%;
-  background-size: .5vmin .5vmin; */
 }
 
-.section-banner
-{
-  height: 100vh;
-  width: 100vw;
-  /* overflow: hidden; */
+.section-banner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
 }
 
-.section-banner .background-video
+.background-content
 {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
+  padding: 10rem;
+}
+
+.landing-video
+{
+  z-index: -1;
 }
 
 .content
@@ -527,17 +515,6 @@ h4
 .gallery img {
   height: auto;
   width: 100%;
-}
-
-.background-clip
-{
-  position: absolute;
-  right: 0;
-  /* bottom: 0; */
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 .hero
@@ -788,26 +765,26 @@ input:valid ~ .details, textarea:valid ~ .details
   color: var(--light);
 
 }
+/* 
+::selection {
+    color: #e8e6e3
+} */
 
 ::-webkit-scrollbar
 {
-  width: 0.5rem;
+  width: 1rem;
+  background-color: #202224;
 }
 
 ::-webkit-scrollbar-thumb
 {
   background: #2a2a30;
-  border-radius: 4px;
+  background-color: #454a4d;
 }
 
 ::-webkit-scrollbar-thumb:hover
 {
   background: #8a8a90;
-}
-
-::selection
-{
-  background: var(--gray);
 }
 
 @media (max-width: 480px) {
@@ -818,7 +795,7 @@ input:valid ~ .details, textarea:valid ~ .details
 
   .title h2
   {
-    font-size: 27vw;
+    font-size: 20vw;
     text-align: center;
   }
 
@@ -837,11 +814,6 @@ input:valid ~ .details, textarea:valid ~ .details
     width: 100%;
     text-align: center;
   }
-/* 
-  .section-portfolio
-  {
-    text-align: left;
-  } */
 
   .footer-col h4::before
   {
