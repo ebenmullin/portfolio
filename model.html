@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EM | my Portfolio</title>
+        <title>Eben Mullin | Scholarship</title>
+        <meta charset="utf-8">
+        <meta name="title" content="Eben Mullin | my Portfolio">
+        <meta name="description" content="Digital Portfolio website for Eben Mullin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -10,14 +15,16 @@
         <!--Navigation Bar-->
         <nav class="nav-dark">
             <div class="container">
-                <a href="index.html"><img id="logo" src="assets/logo_light.png" height="60px" alt="logo"></a>
+                <a href="index.html"><img id="logo" src="assets/nav_logo.png" height="60px" alt="logo"></a>
                 <div class="nav-links">
-                    <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <button class="btn"><a href="index.html#footer">Contact Me</a></button>
-                    </ul>
+                    <div class="wrapper">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="work.html">Portfolio</a></li>
+                            <button class="btn"><a href="index.html#footer">Contact Me</a></button>
+                        </ul>
+                    </div>
                 </div>
                 <a class="hamburger">
                     <span class="bar"></span>
@@ -26,72 +33,73 @@
                 </a>
             </div>
         </nav>
-        <section class="section-banner">
-                <img class="top" src="assets/back_72.png" alt="">
-        </section>
-        
+
+        <div class="section-banner">
+            <img class="background-content" src="assets/back_72.png" alt="">
+            <!-- <img class="background-content" src="assets/design/thumbnail.png" alt=""> -->
+        </div>
+
         <div class="container">
-            <div class="title">
-                <span>3D CAR DESIGN</span>
-                <h2>AERO GT PROJECT</h2>
-            </div>
-            <div class="info-row">
-                <div>
-                    <hr>
-                    <p>PROJECT INFO</p>
+            <section id="info">
+                <div class="title">
+                    <div class="project-info">
+                        <div class="project-number">©2023</div>
+                        <div class="project-label-wrapper">
+                            <p>3D work</p>
+                            <p>AUTOMOTIVE DESIGN</p>
+                        </div>
+                    </div>
+                    <h2>Car designs</h2>
                 </div>
-                <div>
-                    <hr>
-                    <p class="paragraph">The brief for this project was to design assets and market the release of a new graphics card for an online company. I used adobe photoshop and illustrator to design Logo's, Typeface, brochure wallpapers, inital characters</p>
-                    <br> <br> <br>
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dignissimos molestias minus non fuga quis veniam provident explicabo quae eaque nesciunt rerum fugiat saepe ipsam necessitatibus, autem sunt. Quod, sapiente?</p>
-                </div>
-            </div>
-            <div class="info-row">
-                <div>   
-                    <hr>
-                    <p>TOTAL NO. OF</p>
-                    <p>FRAMES RENDERED</p>
-                </div>
-                <div>
-                    <hr>
+                <div class="info-row">
                     <div>
-                        <span>
-                            <span class="big-text">2833</span>
-                            <p class="paragraph">Frames</p>
-                        </span>
+                        <hr>
+                        <p>PROJECT INFO</p>
+                    </div>
+                    <div>
+                        <hr>
+                        <p class="paragraph">I have been working on my custom car designs for the past 3 months, Currently fixing up the interior, I plan to render an animation when its done.</p>
+                        <br><br><br>
+                        <!-- <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sed culpa rerum qui maiores voluptate nam, quo laboriosam! Facilis, velit. Hic sit dolores ex vitae quidem mollitia tempore, laboriosam exercitationem!</p> -->
                     </div>
                 </div>
-            </div>
-
-            <div class="info-row">
-                <div>   
-                    <hr>
-                    <p>TOTAL NO. OF</p>
-                    <p>ASSETS PRODUCED</p>
-                </div>
-                <div>
-                    <hr>
+                <div class="info-row">
+                    <div>   
+                        <hr>
+                        <p>TOTAL NO. OF</p>
+                        <p>ITERATIONS RENDERED</p>
+                    </div>
                     <div>
-                        <span>
-                            <span class="big-text">74</span>
-                            <p class="paragraph">Unique Assets</p>
-                        </span>
+                        <hr>
+                        <div>
+                            <span>
+                                <span class="big-text">222</span>
+                                <p class="paragraph">Frames</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </section>
             <section class="gallery">
                 <ul>
-                    <li><a href="">
-                        <img src="assets/back_73.png" alt="">
+                    <!-- TRAILER -->
+                    <li class="half-width"><a href="#">
+                        <figure>
+                            <img src="assets/back_72.png" alt="">
+                        </figure>
+                        <p class="paragraph">sillohete</p>
                     </a></li>
-                    <li> <a href="">
-                        <img src="assets/back_72.png" alt="">
+                    <li class="half-width"><a href="#">
+                        <figure class="up">
+                            <img src="assets/back_73.png" alt="">
+                        </figure>
                     </a></li>
                 </ul>
             </section>
-
+            <hr>
+            <section class="footer right">
+                <a class="right" href="#">Next Project: WORK IN PROGRESS</a>
+            </section>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

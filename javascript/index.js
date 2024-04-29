@@ -70,10 +70,6 @@ let tl = gsap.timeline({
   defaults: {ease: "power2.out", duration: 2}
 });
 
-window.addEventListener('load', function() {
-  console.log("everything fully loaded")
-  // tl.to(counter, 1, { value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%" });
-});
 
 tl
   .to(counter, 1, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
@@ -109,14 +105,14 @@ modal.on("click", (e) => {
   }
 });
 
-// const vid = document.querySelector('.landing-video');
-// const ratio = 16/9; //!you may need to 'ask' to find out the correct ratio, this is the one for this video and is common.
-// function resize() {
-//   const w = window.innerWidth;
-//   const h = window.innerHeight; 
-//   const scale =  ((w / h) > ratio) ? (w / (ratio * h)) : (h * ratio / w);
+const vid = document.querySelector('.landing-video');
+const ratio = 16/9;
+function resize() {
+  const w = window.innerWidth;
+  const h = window.innerHeight; 
+  const scale =  ((w / h) > ratio) ? (w / (ratio * h)) : (h * ratio / w);
 
-//   vid.style.transform = 'scale(' + scale + ')';
-// }
-// vid.onload = resize;
-// window.onresize = resize;
+  vid.style.transform = 'scale(' + scale + ')';
+}
+vid.onload = resize;
+window.onresize = resize;
