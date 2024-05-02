@@ -39,7 +39,6 @@ make modal or reuse old modal for design and car page images.
         content="https://cdn.discordapp.com/attachments/809546536664563772/971677574939959296/favicon.png">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
 <body>
@@ -59,17 +58,18 @@ make modal or reuse old modal for design and car page images.
                     </ul>
                 </div>
             </div>
-            <a class="hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </a>
+
+            </div>
         </div>
     </nav>
 
     <div class="section-landing">
         <div class="preloader"> 
-            <div class="percent" id="percent">1%</div>
+            <!-- <div class="percent" id="percent">1%</div> -->
         </div>
         <iframe class="background-content landing-video"
             src="https://player.vimeo.com/video/935669469?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1#t=6s"
@@ -152,7 +152,7 @@ make modal or reuse old modal for design and car page images.
             <div class="img-container">
                 <a href="model.html">
                     <div class="mask">
-                        <img src="assets/back_72.png" alt="Aero GT 3D car design">
+                        <img src="assets/back_72.png" loading="lazy" alt="Aero GT 3D car design">
                     </div>
                     <p>View Project</p>
                 </a>
@@ -188,7 +188,7 @@ make modal or reuse old modal for design and car page images.
                             <p>GRAPHIC DESIGN</p>
                         </div>
                     </div>
-                    <h3>DESIGN SCOLARSHIP</h3>
+                    <h3>DESIGN SCHOLARSHIP</h3>
                     <p class="paragraph">Last year, I was awarded a graphic design scholarship for my Aerocore project.
                         the video was limited to three minutes, so feel free to pause and read at your
                         own pace.</p>
@@ -247,134 +247,42 @@ make modal or reuse old modal for design and car page images.
             </div>
         </section>
     </div>
-
-    <!-- <section class="section-cv dark" id="cv">
-            <div class="container">
-                <h3>Curriculum Vitae</h3>
-                <img src="assets/CV_13.jpg" alt="CV" id="cv">
-                <h4>Eben Mullin</h4>
-                    <p><b>Email:</b> ebminer05@gmail.com</p>
-                    <p><b>Github:</b> @touchpotato</p>
-                    <p><b>Discord:</b> TouchPotato#9521</p>
-                    <br>
-                    <p>
-                        I'm a Full Stack web developer with two years of experience in Design, User Experience and back-end development
-                        I'm very experienced with CSS and HTML and I have coded several websites for personal projects and friends.
-                        I've learnt most of my skills from a full stack web dev course online.
-                    </p>
-                    <hr class="hr">
-
-                <h4>Skills</h4>
-                    <p><b>Languages:</b> HTML, CSS, JavaScript, Java, Python, Json</p>
-                    <p><b>Tools:</b> Git, VSCode, Figma, Blender, Gimp, Davinci Resolve, ReelSteady Go</p>
-                    <hr class="hr">
-
-                <h4><span class="fa-solid fa-award"></span> Achievements</h4>
-                <hr>
-                <table>
-                    <tr>
-                    <td style="width: 20%;">OCT 2022</td>
-                    <td>
-                        <b>Evolocity Vehicle Engineering.</b><br>
-                        Earned Best in Show & Excellence in Engineering Award
-                    </td>
-                    </tr>
-                </table>
-
-                <h4>Experience</h4>
-                    <p><b>FPV Drone</b></p>
-                    <li>July 2018 - Sept 2019</li>
-                    <br>
-                    <p>
-                        Back in 2018 I made my own FPV Drone, It took about 3 months to save up for all the parts and build it.
-                        I bought a GoPro and 3d printed a mount for it on top of my drone.
-                        I recently rebuilt my drone with brand new hardware. I switched from 4s to 6s batteries to improve performance and switches to ExpressLRS for improved range.
-                    </p>
-                    <br>
-
-                    <p><b>Portfolio Website</b></p>
-                    <li>Jan 2022 - Still in progress</li>
-                    <br>
-                    <p>
-                        I created my own website so I could show my set of skills and projects to future employers.
-                        It has been a really fun project and I still keep it up to date and make changes.
-                    </p>
-                    <br>
-
-                    <p><b>Minecraft Development</b></p>
-                    <li>May 2020 - Dec 2021</li>
-                    <br>
-                    <p>
-                        I was inspired by other people who coded mods for Minecraft, so I decided I would code my own.
-                        The first mod I coded added new custom tools, armour and materials to the game, Special Ore could be found deep underground and you could use it to make really strong weapons and armour.
-                        I uploaded this to a mod sharing site in july 2020 and it now has ~2000 downloads.
-                        After developing a few more mods I went on to code a custom client for the game.
-                        My client named, "Luminac" Features a new modern GUI's and comes packaged with a bunch of useful mods.
-                        Its a utility mod aimed to automate mundane tasks and improve the user experience of the game.
-                    </p>
-                    <br>
-
-                    <p><b>2d Pygame</b></p>
-                    <li>August 2022 - Still in progress</li>
-                    <br>
-                    <p>
-                        I wanted to learn python because its a great language and highly versatile.
-                        I thought that a fun way to learn python would be to code a 2d platform game,
-                        with help from 2d game library "pygame" I was able to create a simple platformer.
-                    </p>
-                    <hr class="hr">
-
-                <h4>Education</h4>
-                    <p><b>School</b></p>
-                    <li>2018 - Now</li>
-                    <br>
-                    <p>
-                        I am currently doing a course which teaches me full stack development.
-                        Ive learnt how to use a lot of new software and I learnt a lot of new techniques.
-                        Some of these include using NPM, Node.js, express, MongoDB and other databases.
-                        Im also learning how to use javascript frameworks like svelte and react.
-                    </p>
-                    <br>
-                    <p><span class="fa-solid fa-file-lines"></span> <a href="assets/CV_13.jpg">Download PDF</a></p>
-            </div>
-        </section> -->
     <footer class="footer" id="footer">
         <div class="container">
-            <!-- <hr> -->
             <div class="row">
                 <div class="grow">
                     <h4>Get In Touch</h4>
                     <ul>
                         <li><p>Based In Taranaki, New Zealand. Send me an email</p></li>
-                        <li><a href="mailto:ebminer05@gmail.com"><span class="fa-solid fa-envelope"></span> ebminer05@gmail.com </a></li>
-                        <li><a href=""><span class="fa-solid fa-phone"></span> (022) 475 8546</a></li>
+                        <li><a href="mailto:ebminer05@gmail.com">ebminer05@gmail.com </a></li>
+                        <li><a href="">(022) 475 8546</a></li>
                     </ul>
                 </div>
                 <div class="grid grow">
                     <div>
                         <p class="label">Socials</p>
                         <ul>
-                            <li><a href="https://github.com/touchpotato"><span class="fab fa-github"></span> Github</a></li>
-                            <li><a href="https://discord.gg/KFj7shw7s7"><span class="fab fa-instagram"></span> Instagram</a></li>
-                            <li><a href="https://www.youtube.com/channel/UCasuLHiojLWPLBp9XKo-ILA"><span class="fab fa-youtube"></span> Youtube</a></li>
-                            <li><a href="https://ko-fi.com/ebenmullin"><span class="fa-solid fa-dollar-sign"></span> Donate</a></li>
+                            <li><a href="https://github.com/touchpotato">Github</a></li>
+                            <li><a href="https://discord.gg/KFj7shw7s7">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/channel/UCasuLHiojLWPLBp9XKo-ILA">Youtube</a></li>
+                            <li><a href="https://ko-fi.com/ebenmullin">Donate</a></li>
                         </ul>
                     </div>
                     <div>
                         <p class="label">Services</p>
                         <ul>
-                            <li><a href="index.html"><span class="fa-solid fa-house"></span> Drone</a></li>
-                            <li><a href="#about"><span class="fa-solid fa-circle-info"></span> Film</a></li>
-                            <li><a href="work.html"><span class="fa-solid fa-image-portrait"></span> 3D Work</a></li>
-                            <li><a href="contact.html"><span class="fa-solid fa-message"></span> Graphic Design</a></li>
+                            <li><a href="index.html">Drone</a></li>
+                            <li><a href="#about">Film</a></li>
+                            <li><a href="work.html">3D Work</a></li>
+                            <li><a href="contact.html">Graphic Design</a></li>
                         </ul>
                     </div>
                     <div>
                         <p class="label">Sitemap</p>
                         <ul>
-                            <li><a href="index.html"><span class="fa-solid fa-house"></span> Home</a></li>
-                            <li><a href="#about"><span class="fa-solid fa-circle-info"></span> About</a></li>
-                            <li><a href="work.html"><span class="fa-solid fa-image-portrait"></span> Portfolio</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="work.html">Portfolio</a></li>
                             <!-- <li><a href="contact.html"><span class="fa-solid fa-message"></span> Contact</a></li> -->
                         </ul>
                     </div>

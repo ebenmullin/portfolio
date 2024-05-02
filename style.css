@@ -41,7 +41,7 @@ a, p, li
 
 .label
 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--light);
 }
 
@@ -420,7 +420,7 @@ h4
   background-color: #0a0a0d;
   flex-direction: column;
 }
-
+/* 
 .percent
 {
   font-family: "Bebas Neue", sans-serif;
@@ -431,7 +431,7 @@ h4
   width: 100%;
   color: var(--light);
   font-size: 10vw;
-}
+} */
 
 .section-landing
 {
