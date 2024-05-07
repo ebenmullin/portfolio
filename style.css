@@ -207,52 +207,6 @@ section
   padding: 5vh 0;
 }
 
-.modal
-{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  padding-top: 100px;
-  overflow: auto;
-  opacity: 0;
-  pointer-events: none;
-  backdrop-filter: blur(10px);
-  transition: all 300ms ease;
-}
-
-.modal.open
-{
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal .modal-img
-{
-  position: absolute;
-  height: 70%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: all 300ms ease;
-}
-
-.modal .modal-img.open
-{
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal .caption
-{
-  color: #ffffff;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -5%);
-}
-
 .img-container
 {
   /* overflow: hidden;
@@ -392,18 +346,6 @@ h4
   color: #5d81a2;
 }
 
-.image-grid
-{
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  grid-auto-flow: dense;
-  grid-gap: 2rem;
-}
-
 .preloader
 {
   position: absolute;
@@ -517,6 +459,20 @@ h4
 {
   display: grid;
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery figure
+{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.gallery iframe
+{
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .gallery ul li p
@@ -537,7 +493,9 @@ h4
   grid-column: span 2;
 }
 
-.gallery img {
+.gallery img,
+.gallery video
+{
   height: auto;
   width: 100%;
 }
@@ -578,34 +536,6 @@ h4
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-.image-grid .image-box
-{
-  position: relative;
-  overflow: hidden;
-  /* aspect-ratio: 4 / 3; */
-  border-radius: 2rem;
-}
-
-.image-grid .image-box:nth-child(7n + 1)
-{
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.image-grid .image-box img
-{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 500ms ease;
-}
-
-.image-grid .image-box:hover img
-{
-  transform: scale(1.1);
-  filter: brightness(0.5);
 }
 
 .footer
@@ -803,16 +733,6 @@ hr
     text-align: left;
   }
 
-  .image-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 250px;
-  }
-
-  .image-grid .image-box:nth-child(7n + 1) {
-    grid-column: unset;
-    grid-row: unset;
-  }
-
   .aligner-flex,
   .img-container
   {
@@ -879,11 +799,4 @@ hr
   {
     font-size: 11rem;
   }
-  
-  /* .background-content
-  {
-    padding: 0 10rem;
-    max-width: 1350px;
-    margin: auto;
-  } */
 }
