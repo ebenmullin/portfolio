@@ -339,41 +339,13 @@ h4
 {
   font-size: 1.5rem;
   line-height: 1.5;
+  font-weight: 300;
 }
 
 .highlight
 {
   color: #5d81a2;
 }
-
-.preloader
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
-  height: 100vh;
-  z-index: 0;
-  /* z-index: 50; */
-  background-color: #0a0a0d;
-  flex-direction: column;
-}
-/* 
-.percent
-{
-  font-family: "Bebas Neue", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  color: var(--light);
-  font-size: 10vw;
-} */
 
 .section-landing
 {
@@ -446,27 +418,21 @@ h4
   row-gap: 3rem;
 }
 
-.gallery ul
+.gallery
 {
-  column-gap: 2rem;
   display: grid;
+  column-gap: 2rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  place-content: center;
   row-gap: 1.75rem;
+  place-content: center;
 }
 
-.gallery ul li
+.gallery a
 {
   display: grid;
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.gallery figure
-{
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .gallery iframe
@@ -475,15 +441,7 @@ h4
   min-width: 100%;
 }
 
-.gallery ul li p
-{
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-.gallery ul .full-width
+.gallery .full-width
 {
   grid-column: span 4;
 }
@@ -821,7 +779,7 @@ hr
 }
 
 .home-gallery-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr;
     grid-auto-columns: 1fr;
     display: grid
 ;
@@ -847,9 +805,14 @@ hr
     grid-area: 3 / 4 / 4 / 9;
 }
 
+#img_right {
+    grid-area: 4 / 10 / 4 / 16;
+}
+
 .grid-image:nth-of-type(1) {
   width: 30vw;
   height: 20vw;
+  margin-right: 3vw;
 }
 
 .grid-image:nth-of-type(2) {
@@ -872,7 +835,12 @@ hr
 
 .grid-image:nth-of-type(5) {
     margin-top: 7vw;
-    margin-left: 6.5vw;
+    width: 27vw;
+    height: 16vw;
+}
+
+.grid-image:nth-of-type(6) {
+    margin-top: 7vw;
     width: 27vw;
     height: 16vw;
 }
@@ -883,3 +851,11 @@ hr
   height: 100%;
 }
 
+
+.f-carousel__thumbs {
+  --f-thumb-selected-shadow: none;
+  --f-thumbs-gap: 2px;
+  --f-thumb-transform: scale(0.86);
+  --f-thumb-hover-transform: scale(0.86);
+  --f-thumb-selected-transform: scale(1);
+}

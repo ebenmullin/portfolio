@@ -1,6 +1,11 @@
+
+
+
+
+// navigation burger animation
+
 let navExpanded = gsap.timeline({ paused: true });
 
-// Define the animation sequence
 navExpanded
   .to($(".hamburger .bar:nth-child(1)"), 0.3, { y: 8, rotation: 45 }, "start")
   .to($(".hamburger .bar:nth-child(2)"), 0.3, { opacity: 0 }, "start")
@@ -18,6 +23,9 @@ $(".nav-links a").click(function() {
   navExpanded.reverse();
 });
 
+
+// Project Slide in Animation
+
 let masks = document.querySelectorAll(".mask");
 
 masks.forEach(mask => {
@@ -34,12 +42,8 @@ masks.forEach(mask => {
     .from(video, 1.5, {xPercent: 100, scale: 1.3, delay: -1.5, ease: Power2.out});
 });
 
-// let counter = {
-//   value: 0
-// }
 
-// let percent = $(".percent");
-// let precent = document.getElementById("percent")
+// GSAP Loading Animation
 
 let tl = gsap.timeline({
   defaults: {ease: "power2.out", duration: 2}
@@ -47,38 +51,13 @@ let tl = gsap.timeline({
 
 
 tl
-  // .to(counter, 1, {ease: "none", value: 100, onUpdate: () => percent.innerHTML = Math.round(counter.value) + "%"})
-  // .to(".percent", 1, {opacity: 0})
   .staggerFrom($(".hero .paragraph"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1)
   .staggerFrom($(".content"), 2, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=2")
   .to(".preloader", 1, {opacity: 0}, "-=0.5")
   .from("nav", 1, {opacity: 0}, "=-1");
 
-// Modal for portfolio
 
-const modal = $(".modal"),
-      previews = $(".image-box img"),
-      original = $(".modal-img"),
-      caption = $(".caption");
-
-previews.each(function(preview) {
-  $(this).on("click", () => {
-    modal.addClass("open");
-    original.addClass("open");
-
-    const imgDir = $(this).attr("data-original");
-    original.attr("src", "./assets/" + imgDir);
-    caption.text($(this).attr("alt")); 
-  });
-});
-
-modal.on("click", (e) => {
-  if($(e.target).hasClass("modal")) {
-    modal.removeClass("open");
-    original.removeClass("open");
-
-  }
-});
+// Landing Video Resize  
 
 const vid = document.querySelector('.landing-video');
 const ratio = 16/9;
