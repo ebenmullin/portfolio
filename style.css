@@ -103,16 +103,17 @@ nav .container
 .btn
 {
   border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
   padding: 0.5rem 1rem;
-  position: relative;
-  text-decoration: none;
-  transition: all 300ms ease;
-  white-space: nowrap;
   background-color: var(--cyan);
   border: 2px solid var(--cyan);
+}
+
+.btn,
+.btn-2
+{
+  position: relative;
+  transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .btn:hover
@@ -120,17 +121,71 @@ nav .container
   background-color: transparent;
 }
 
-.btn a
-{
-  color: var(--light);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 300ms ease;
-}
-
 .btn:hover a
 {
   color: var(--cyan);
+}
+
+.btn a
+{
+  color: var(--light);
+}
+
+.btn a,
+.btn-2 a
+{
+  transition: all 300ms ease;
+  text-decoration: none;
+}
+
+.btn-2:hover a
+{
+  color: var(--pink);
+}
+
+.btn-2 {
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+  background: none;
+  border: none;
+  font-weight: 300;
+}
+
+.btn-2:before {
+  animation: move-out .3s;
+  background: var(--pink);
+  content: "";
+  height: 2px;
+  /* height: 100%; */
+  left: -101%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 300ms ease;
+  will-change: transform;
+  z-index: -1;
+}
+
+.btn-2:hover:before {
+  animation: move-in .3s forwards;
+}
+
+@keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
 }
 
 .hamburger
@@ -370,6 +425,26 @@ h4
   right: 0;
   width: 100%;
   height: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.background-content.blur
+{
+  top: -10%;
+  filter: blur(5px) opacity(0.3);
+}
+
+
+
+.inside
+{
+  position: absolute;
+  width: 50vw;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  border-radius: 1rem;
 }
 
 .landing-video
@@ -716,6 +791,17 @@ hr
     flex-direction: column;
   }
   
+  .gallery
+  {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery .half-width,
+  .gallery .full-width
+  {
+    grid-column: span 2;
+  }
+
 }
 
 @media (min-width: 1024px) {
