@@ -16,31 +16,32 @@
 
 <body class="dark">
     <!--Navigation Bar-->
-    <nav class="nav-dark">
+    <nav>
         <div class="container">
-            <a href="index.html"><img id="logo" src="assets/nav_logo.png" height="60px" alt="logo"></a>
+            <a href="index.html"><img id="logo" src="assets/nav_logo.png" width="60px" height="60px" alt="logo"></a>
             <div class="nav-links">
                 <div class="wrapper">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#about">About</a></li>
                         <li><a href="projects.html">Portfolio</a></li>
-                        <button class="btn"><a href="index.html#footer">Contact Me</a></button>
+                        <button class="btn"><a href="#footer">Contact Me</a></button>
                     </ul>
                 </div>
             </div>
-            <a class="hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </a>
+
+            </div>
         </div>
     </nav>
 
     <div class="section-banner">
-        <img class="background-content" src="assets/aerocore/thumbnail_result.jpg" alt="">
-        <iframe class="background-content" src="https://player.vimeo.com/video/942138037?h=532bee68a1&byline=0&title=0"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture">
+        <img class="background-content blur" src="assets/aerocore/thumbnail_result.jpg" alt="">
+        <iframe class="background-content" src="https://player.vimeo.com/video/942138037?player_id=1&amp;app_id=58479&autoplay=1"
+            frameborder="0" allowfullscreen="1">
         </iframe>
     </div>
 
@@ -69,10 +70,11 @@
                         Then I used blender to bring my characters to the 3d space and improve them. <br>
                         The graphics card was 3d modelled from scratch and then overlayed with texturing done in
                         photoshop,
-                        Lastly I created an animation showcasing the card with cinematic lighting, this was the release trailer.</p>
+                        Lastly I created an animation showcasing the card with cinematic lighting, this was the release
+                        trailer.</p>
                     <br> <br> <br>
                     <p class="paragraph">Programs Used: <br>
-                    Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Davinci Resolve, Blender.</p>
+                        Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Davinci Resolve, Blender.</p>
                 </div>
             </div>
             <div class="info-row">
@@ -181,11 +183,51 @@
                 <img src="assets/aerocore/credits_result.jpg" alt="">
             </a>
         </section>
-        <hr>
-        <section class="footer right">
-            <a class="right" href="#">Next Project: WORK IN PROGRESS</a>
-        </section>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="grow">
+                    <h2 class="center">NEXT PROJECTS:</h2>
+                </div>
+            </div>
+            <hr class="hr">
+            <div class="row">
+                <div class="grid grow">
+                    <ul class="next-project">
+                        <a href="cinemagnet.html">
+                            <li>
+                                <img src="assets/cinemagnet/cinemagnet_thumb.jpg" alt="">
+                            </li>
+                            <li>
+                                <p>CineMagnet - Automotive Media</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <ul class="next-project">
+                        <a href="weldablealloys.html">
+                            <li>
+                                <img src="assets/branding/homepage.jpg" alt="">
+                            </li>
+                            <li>
+                                <p>Web Design - Weldable Alloys</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <ul class="next-project">
+                        <a href="tunnel.html">
+                            <li>
+                                <img src="assets/car/s13_side_split.jpg" alt="">
+                            </li>
+                            <li>
+                                <p>3D Render - S13 Tunnel</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://player.vimeo.com/api/player.js"></script>

@@ -16,24 +16,25 @@
 
 <body>
     <!--Navigation Bar-->
-    <nav class="nav-dark">
+    <nav>
         <div class="container">
-            <a href="index.html"><img id="logo" src="assets/nav_logo.png" height="60px" alt="logo"></a>
+            <a href="index.html"><img id="logo" src="assets/nav_logo.png" width="60px" height="60px" alt="logo"></a>
             <div class="nav-links">
                 <div class="wrapper">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#about">About</a></li>
                         <li><a href="projects.html">Portfolio</a></li>
-                        <button class="btn"><a href="index.html#footer">Contact Me</a></button>
+                        <button class="btn"><a href="#footer">Contact Me</a></button>
                     </ul>
                 </div>
             </div>
-            <a class="hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </a>
+
+            </div>
         </div>
     </nav>
 
@@ -61,13 +62,14 @@
                 </div>
                 <div>
                     <hr>
-                    <p class="paragraph">I started this project to push my photorealism skills in Blender. 
-                            I spent a lot of time on the tunnels texturing and small details that help sell the final render.
-                            Lighting and motion blur added a lot.
-                            then I played around in Adobe lightroom to give it that final touch</p>
+                    <p class="paragraph">I started this project to push my photorealism skills in Blender.
+                        I spent a lot of time on the tunnels texturing and small details that help sell the final
+                        render.
+                        Lighting and motion blur added a lot.
+                        then I played around in Adobe lightroom to give it that final touch</p>
                     <br><br><br>
                     <p class="paragraph">Programs Used: <br>
-                    Blender, Adobe Photoshop, Adobe Lightroom.</p>
+                        Blender, Adobe Photoshop, Adobe Lightroom.</p>
                     <!-- <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sed culpa rerum qui maiores voluptate nam, quo laboriosam! Facilis, velit. Hic sit dolores ex vitae quidem mollitia tempore, laboriosam exercitationem!</p> -->
                 </div>
             </div>
@@ -90,7 +92,7 @@
         </section>
         <section class="gallery">
 
-            <a class="full-width" data-fancybox="gallery" data-src="assets/car/website_2.jpg">
+            <a class="full-width" data-fancybox="gallery" data-src="assets/car/s13_side_split.jpg">
                 <img src="assets/car/s13_side_split.jpg" alt="">
             </a>
 
@@ -109,7 +111,7 @@
             <a class="half-width" data-fancybox="gallery" data-src="assets/car/s13_front_render.jpg">
                 <img src="assets/car/s13_front_render.jpg" alt="s13 side view">
             </a>
-            
+
             <a class="full-width" data-fancybox="gallery" data-src="assets/car/project_window.jpg">
                 <img src="assets/car/project_window.jpg" alt="rx7 front view">
             </a>
@@ -135,7 +137,46 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <a class="right" href="#">Next Project: WORK IN PROGRESS</a>
+            <div class="row">
+                <div class="grow">
+                    <h2 class="center">NEXT PROJECTS:</h2>
+                </div>
+            </div>
+            <hr class="hr">
+            <div class="row">
+                <div class="grid grow">
+                    <ul class="next-project">
+                        <a href="aerocore.html">
+                            <li>
+                                <img src="assets/aerocore/card_4_result.jpg" alt="">
+                            </li>
+                            <li>
+                                <p>Design scholarship - AeroCore</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <ul class="next-project">
+                        <a href="cinemagnet.html">
+                            <li>
+                                <img src="assets/cinemagnet/cinemagnet_thumb.jpg" alt="">
+                            </li>
+                            <li>
+                                <p>CineMagnet - Automotive Media</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <ul class="next-project">
+                        <a href="weldablealloys.html">
+                            <li>
+                                <img src="assets/branding/homepage.jpg" alt="">
+                            </li>
+                            <li>
+                                <p>Web Design - Weldable Alloys</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
